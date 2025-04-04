@@ -12,12 +12,12 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap",
         "css/vendors.min.css",
         "css/icon.min.css",
         "css/style.min.css",
         "css/responsive.min.css",
-        "css/business.css",
-        "demos/business/business.css" ,
+        "css/business.css" ,
     ];
     public $js = [
         "js/jquery.js",

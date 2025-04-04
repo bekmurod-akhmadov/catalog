@@ -2,12 +2,9 @@
 
 use common\models\Catalog;
 use common\models\Department;
-use common\models\Program;
-use common\models\SubjectBoard;
-$this->title = "Catalog";
+$this->title = 'Catalog';
 ?>
-
-<section class="page-title-big-typography bg-dark-gray ipad-top-space-margin cover-background" data-parallax-background-ratio="0.5" style="background-repeat: no-repeat;background-image: url(images/newuu/breadcrump2.jpg);">
+<section class="page-title-big-typography bg-dark-gray ipad-top-space-margin cover-background" data-parallax-background-ratio="0.5" style="background-repeat: no-repeat;background-image: url(/images/newuu/breadcrump2.jpg);">
     <div class="opacity-very-light bg-dark-slate-blue"></div>
     <div class="container">
         <div class="row align-items-center justify-content-center extra-small-screen">
@@ -56,9 +53,9 @@ $this->title = "Catalog";
                                                     <select class="form-select h-100" id="inlineFormSelectPref" name="term">
                                                         <option value=""></option>
                                                         <?php if (!empty(Catalog::getTermList())): ?>
-                                                        <?php foreach (Catalog::getTermList() as $key => $item):?>
-                                                        <option <?= isset($_GET['term']) && $_GET['term'] == $key ? 'selected': ''?> value="<?=$key?>"><?=$item?></option>
-                                                        <?php endforeach;?>
+                                                            <?php foreach (Catalog::getTermList() as $key => $item):?>
+                                                                <option <?= isset($_GET['term']) && $_GET['term'] == $key ? 'selected': ''?> value="<?=$key?>"><?=$item?></option>
+                                                            <?php endforeach;?>
                                                         <?php endif; ?>
                                                     </select>
                                                 </div>
@@ -67,9 +64,9 @@ $this->title = "Catalog";
                                                     <select class="form-select h-100" id="inlineFormSelectPref2" name="category">
                                                         <option value=""></option>
                                                         <?php if (!empty($catalog_categories)):?>
-                                                        <?php foreach ($catalog_categories as $category):?>
-                                                        <option <?= isset($_GET['category']) && $_GET['category'] == $category->id ? 'selected': ''?> value="<?=$category->id?>"><?=$category->name?></option>
-                                                        <?php endforeach; ?>
+                                                            <?php foreach ($catalog_categories as $category):?>
+                                                                <option <?= isset($_GET['category']) && $_GET['category'] == $category->id ? 'selected': ''?> value="<?=$category->id?>"><?=$category->name?></option>
+                                                            <?php endforeach; ?>
                                                         <?php endif; ?>
                                                     </select>
                                                 </div>
@@ -102,159 +99,159 @@ $this->title = "Catalog";
                                     <div class="col-xl-9">
                                         <div class="tab-content h-100">
                                             <?php if (!empty($dataProvider->getModels())): ?>
-                                            <?php foreach ($dataProvider->getModels() as $index => $model): ?>
-                                            <div class="tab-pane fade in h-100 <?=$index == 0 ? 'active show' : ''?>" id="tab_seven<?=$model->id?>" role="tabpanel">
-                                                <div class="row h-100">
-                                                    <div class="col-md-12 mx-auto rounded-4">
-                                                        <div class="table-responsive border rounded-4">
-                                                            <table class="table">
-                                                                <thead>
-                                                                <tr>
-                                                                    <th scope="col" colspan="3" class="fs-5 rounded-top-4" style="background-color: #173e7d;color: white;padding: 12px">Deep Learning</th>
-                                                                </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td scope="row" class="px-2 py-0 border-bottom-0">
-                                                                        <div class="pt-1">
-                                                                            <span class="text-base-color fs-6 fw-semibold">Term:</span><br>
-                                                                            <span class="fs-14 catalog-res"><?=$model->term ? Catalog::getTermList()[$model->term] : ''?></span>
-                                                                        </div>
-                                                                        <div class="pt-1">
-                                                                            <span class="text-base-color fs-6 fw-semibold">Part of term:</span><br>
-                                                                            <span class="fs-14 catalog-res"><?=$model->part_of_team ?? ''?></span>
-                                                                        </div>
-                                                                        <div class="pt-1">
-                                                                            <span class="text-base-color fs-6 fw-semibold">Format:</span><br>
-                                                                            <span class="fs-14 catalog-res"><?=$model->format ?? ''?></span>
-                                                                        </div>
-                                                                        <div class="pt-1">
-                                                                            <span class="text-base-color fs-6 fw-semibold">Waitlist Total:</span><br>
-                                                                            <span class="fs-14 catalog-res"><?=$model->waitlist_total ?? ''?></span>
-                                                                        </div>
-<!--                                                                        <div class="pt-1">-->
-<!--                                                                            <span class="text-base-color fs-6 fw-semibold">Credits:</span><br>-->
-<!--                                                                            <span class="fs-14 catalog-res">4</span>-->
-<!--                                                                        </div>-->
-                                                                    </td>
-                                                                    <td class="border-bottom-0 px-2 py-0">
-<!--                                                                        <div class="pt-1">-->
-<!--                                                                            <span class="text-base-color fs-6 fw-semibold">Credit Status:</span><br>-->
-<!--                                                                            <span class="fs-14 catalog-res">Graduate</span>-->
-<!--                                                                        </div>-->
-                                                                        <div class="pt-1">
-                                                                            <span class="text-base-color fs-6 fw-semibold">Section Status:</span><br>
-                                                                            <span class="fs-14 catalog-res"><?=$model->secton_status ?? ''?></span>
-                                                                        </div>
-                                                                        <div class="pt-1">
-                                                                            <span class="text-base-color fs-6 fw-semibold">Maximum Enrollment:</span><br>
-                                                                            <span class="fs-14 catalog-res"><?=$model->maximum_enrollment ?? ''?></span>
-                                                                        </div>
-                                                                        <div class="pt-1">
-                                                                            <span class="text-base-color fs-6 fw-semibold">Seats Avail:</span><br>
-                                                                            <span class="fs-14 catalog-res"><?=$model->seats_avail ?? ''?></span>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                            <table class="table">
-                                                                <thead>
-                                                                <tr>
-                                                                    <th scope="col" colspan="3" class="fs-5" style="background-color: #173e7d;color: white;padding: 12px">Deadlines</th>
-                                                                </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td scope="row" class="px-2 py-0"><span class="text-base-color fs-6 fw-semibold p-0">Last day to register</span></td>
-                                                                    <td class="fs-14 catalog-res px-2 py-0"><?=$model->last_day_to_register ? date("F j, Y", strtotime($model->last_day_to_register)) : '';?></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td scope="row" class="px-2 py-0"><span class="text-base-color fs-6 fw-semibold">Last day to make course and credit status <br> changes, and drop for 100% refund</span></td>
-                                                                    <td class="fs-14 catalog-res px-2 py-0"><?=$model->last_date_to_add_or_drop ? date("F j, Y", strtotime($model->last_date_to_add_or_drop)) : '';?></td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                            <?php if(isset($model->findInstructor) && !empty($model->findInstructor)): ?>
+                                                <?php foreach ($dataProvider->getModels() as $index => $model): ?>
+                                                    <div class="tab-pane fade in h-100 <?=$index == 0 ? 'active show' : ''?>" id="tab_seven<?=$model->id?>" role="tabpanel">
+                                                        <div class="row h-100">
+                                                            <div class="col-md-12 mx-auto rounded-4">
+                                                                <div class="table-responsive border rounded-4">
+                                                                    <table class="table">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th scope="col" colspan="3" class="fs-5 rounded-top-4" style="background-color: #173e7d;color: white;padding: 12px">Deep Learning</th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td scope="row" class="px-2 py-0 border-bottom-0">
+                                                                                <div class="pt-1">
+                                                                                    <span class="text-base-color fs-6 fw-semibold">Term:</span><br>
+                                                                                    <span class="fs-14 catalog-res"><?=$model->term ? Catalog::getTermList()[$model->term] : ''?></span>
+                                                                                </div>
+                                                                                <div class="pt-1">
+                                                                                    <span class="text-base-color fs-6 fw-semibold">Part of term:</span><br>
+                                                                                    <span class="fs-14 catalog-res"><?=$model->part_of_team ?? ''?></span>
+                                                                                </div>
+                                                                                <div class="pt-1">
+                                                                                    <span class="text-base-color fs-6 fw-semibold">Format:</span><br>
+                                                                                    <span class="fs-14 catalog-res"><?=$model->format ?? ''?></span>
+                                                                                </div>
+                                                                                <div class="pt-1">
+                                                                                    <span class="text-base-color fs-6 fw-semibold">Waitlist Total:</span><br>
+                                                                                    <span class="fs-14 catalog-res"><?=$model->waitlist_total ?? ''?></span>
+                                                                                </div>
+                                                                                <!--                                                                        <div class="pt-1">-->
+                                                                                <!--                                                                            <span class="text-base-color fs-6 fw-semibold">Credits:</span><br>-->
+                                                                                <!--                                                                            <span class="fs-14 catalog-res">4</span>-->
+                                                                                <!--                                                                        </div>-->
+                                                                            </td>
+                                                                            <td class="border-bottom-0 px-2 py-0">
+                                                                                <!--                                                                        <div class="pt-1">-->
+                                                                                <!--                                                                            <span class="text-base-color fs-6 fw-semibold">Credit Status:</span><br>-->
+                                                                                <!--                                                                            <span class="fs-14 catalog-res">Graduate</span>-->
+                                                                                <!--                                                                        </div>-->
+                                                                                <div class="pt-1">
+                                                                                    <span class="text-base-color fs-6 fw-semibold">Section Status:</span><br>
+                                                                                    <span class="fs-14 catalog-res"><?=$model->secton_status ?? ''?></span>
+                                                                                </div>
+                                                                                <div class="pt-1">
+                                                                                    <span class="text-base-color fs-6 fw-semibold">Maximum Enrollment:</span><br>
+                                                                                    <span class="fs-14 catalog-res"><?=$model->maximum_enrollment ?? ''?></span>
+                                                                                </div>
+                                                                                <div class="pt-1">
+                                                                                    <span class="text-base-color fs-6 fw-semibold">Seats Avail:</span><br>
+                                                                                    <span class="fs-14 catalog-res"><?=$model->seats_avail ?? ''?></span>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                    <table class="table">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th scope="col" colspan="3" class="fs-5" style="background-color: #173e7d;color: white;padding: 12px">Deadlines</th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td scope="row" class="px-2 py-0"><span class="text-base-color fs-6 fw-semibold p-0">Last day to register</span></td>
+                                                                            <td class="fs-14 catalog-res px-2 py-0"><?=$model->last_day_to_register ? date("F j, Y", strtotime($model->last_day_to_register)) : '';?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td scope="row" class="px-2 py-0"><span class="text-base-color fs-6 fw-semibold">Last day to make course and credit status <br> changes, and drop for 100% refund</span></td>
+                                                                            <td class="fs-14 catalog-res px-2 py-0"><?=$model->last_date_to_add_or_drop ? date("F j, Y", strtotime($model->last_date_to_add_or_drop)) : '';?></td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                    <?php if(isset($model->findInstructor) && !empty($model->findInstructor)): ?>
 
-                                                            <table class="table">
+                                                                        <table class="table">
 
-                                                                <thead>
-                                                                <tr>
-                                                                    <th scope="col" colspan="2" class="fs-5" style="background-color: #173e7d;color: white;padding: 12px">Instructor Info</th>
-                                                                </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td scope="row" class="border-bottom-0 px-2 py-0">
-                                                                        <span class="fs-5 fw-semibold py-0"><?=$model->findInstructor->first_name . ' ' . $model->findInstructor->last_name ?>, <?=$model->findInstructor->academic_degree ?></span><br>
-                                                                        <span class="fs-14 catalog-res py-0"><?=$model->findInstructor->description?>l</span>
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                            <?php endif; ?>
-                                                            <table class="table">
-                                                                <thead>
-                                                                <tr>
-                                                                    <th scope="col" colspan="3" class="fs-5" style="background-color: #173e7d;color: white;padding: 12px">Meeting Info</th>
-                                                                </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td scope="row" colspan="2" class="px-2 py-0"><?=$model->meeting_info ?? ''?></td>
-                                                                </tr>
-<!--                                                                <tr>-->
-<!--                                                                    <td scope="row" class="fs-14 border-bottom-0 px-2 py-0"><span class="text-base-color fs-6 fw-semibold">Participation Option</span></td>-->
-<!--                                                                    <td class="fs-14 border-bottom-0 catalog-res px-2 py-0">Online Synchronous</td>-->
-<!--                                                                </tr>-->
-                                                                </tbody>
-                                                            </table>
-                                                            <table class="table">
-                                                                <thead>
-                                                                <tr>
-                                                                    <th scope="col" colspan="3" class="fs-5" style="background-color: #173e7d;color: white;padding: 12px">Description</th>
-                                                                </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td scope="row" colspan="2" class="border-bottom-0 catalog-res px-2 py-0 fs-14">
-                                                                        <?=$model->description ?? ''?>
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                            <table class="table">
-                                                                <thead>
-                                                                <tr>
-                                                                    <th scope="col" colspan="3" class="fs-5" style="background-color: #173e7d;color: white;padding: 12px">Notes</th>
-                                                                </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td scope="row" colspan="2" class="border-bottom-0 catalog-res px-2 py-0 fs-14">  <?=$model->notes ?? ''?></td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                            <table class="table">
-                                                                <thead>
-                                                                <tr>
-                                                                    <th scope="col" colspan="3" class="fs-5" style="background-color: #173e7d;color: white;padding: 12px">Syllabus</th>
-                                                                </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                <tr>
-                                                                    <th scope="row" colspan="2" class="border-bottom-0 p-1">
-                                                                        <a href="#" class="btn btn-very-small bg-base-color text-white hover-base rounded">View Syllabus <i class="fa-solid fa-arrow-right fs-12"></i></a>
-                                                                    </th>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
+                                                                            <thead>
+                                                                            <tr>
+                                                                                <th scope="col" colspan="2" class="fs-5" style="background-color: #173e7d;color: white;padding: 12px">Instructor Info</th>
+                                                                            </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                <td scope="row" class="border-bottom-0 px-2 py-0">
+                                                                                    <span class="fs-5 fw-semibold py-0"><?=$model->findInstructor->first_name . ' ' . $model->findInstructor->last_name ?>, <?=$model->findInstructor->academic_degree ?></span><br>
+                                                                                    <span class="fs-14 catalog-res py-0"><?=$model->findInstructor->description?>l</span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    <?php endif; ?>
+                                                                    <table class="table">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th scope="col" colspan="3" class="fs-5" style="background-color: #173e7d;color: white;padding: 12px">Meeting Info</th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td scope="row" colspan="2" class="px-2 py-0"><?=$model->meeting_info ?? ''?></td>
+                                                                        </tr>
+                                                                        <!--                                                                <tr>-->
+                                                                        <!--                                                                    <td scope="row" class="fs-14 border-bottom-0 px-2 py-0"><span class="text-base-color fs-6 fw-semibold">Participation Option</span></td>-->
+                                                                        <!--                                                                    <td class="fs-14 border-bottom-0 catalog-res px-2 py-0">Online Synchronous</td>-->
+                                                                        <!--                                                                </tr>-->
+                                                                        </tbody>
+                                                                    </table>
+                                                                    <table class="table">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th scope="col" colspan="3" class="fs-5" style="background-color: #173e7d;color: white;padding: 12px">Description</th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td scope="row" colspan="2" class="border-bottom-0 catalog-res px-2 py-0 fs-14">
+                                                                                <?=$model->description ?? ''?>
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                    <table class="table">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th scope="col" colspan="3" class="fs-5" style="background-color: #173e7d;color: white;padding: 12px">Notes</th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td scope="row" colspan="2" class="border-bottom-0 catalog-res px-2 py-0 fs-14">  <?=$model->notes ?? ''?></td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                    <table class="table">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th scope="col" colspan="3" class="fs-5" style="background-color: #173e7d;color: white;padding: 12px">Syllabus</th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <th scope="row" colspan="2" class="border-bottom-0 p-1">
+                                                                                <a href="#" class="btn btn-very-small bg-base-color text-white hover-base rounded">View Syllabus <i class="fa-solid fa-arrow-right fs-12"></i></a>
+                                                                            </th>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <?php endforeach; ?>
+                                                <?php endforeach; ?>
                                             <?php endif; ?>
                                         </div>
                                     </div>
@@ -266,31 +263,31 @@ $this->title = "Catalog";
                         <div class="tab-pane fade in <?=isset($_GET['department']) && !empty($_GET['department']) ? 'active show' : ''?> " id="tab_sec2" role="tabpanel">
                             <div class="row my-5">
                                 <form action="<?=\yii\helpers\Url::to(['/catalog'])?>">
-                                <!-- Step Form -->
-                                <div class="row p-3 bg-light-blue rounded-4">
-                                    <div class="col-md-4 mt-2">
-                                        <div id="step-1">
-                                            <select id="building" class="form-select h-100">
-                                                <option value="">Search by Degree</option>
-                                                <?php if (!empty(Department::getGraduates())):?>
-                                                    <?php foreach (Department::getGraduates() as $key => $item):?>
-                                                        <option value="<?=$key?>"><?=$item?></option>
-                                                    <?php endforeach;?>
-                                                <?php endif; ?>
-                                            </select>
+                                    <!-- Step Form -->
+                                    <div class="row p-3 bg-light-blue rounded-4">
+                                        <div class="col-md-4 mt-2">
+                                            <div id="step-1">
+                                                <select id="building" class="form-select h-100">
+                                                    <option value="">Search by Degree</option>
+                                                    <?php if (!empty(Department::getGraduates())):?>
+                                                        <?php foreach (Department::getGraduates() as $key => $item):?>
+                                                            <option value="<?=$key?>"><?=$item?></option>
+                                                        <?php endforeach;?>
+                                                    <?php endif; ?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mt-2">
+                                            <div id="step-2">
+                                                <select name="department"  id="room" class="form-select h-100">
+                                                    <option value="">Search by Department</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mt-2">
+                                            <button id="search-btn" class="w-100 btn btn-primary h-100 rounded" style="background-color: #092545">Search</button>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 mt-2">
-                                        <div id="step-2">
-                                            <select name="department"  id="room" class="form-select h-100">
-                                                <option value="">Search by Department</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 mt-2">
-                                        <button id="search-btn" class="w-100 btn btn-primary h-100 rounded" style="background-color: #092545">Search</button>
-                                    </div>
-                                </div>
                                 </form>
                                 <div class="row mt-2">
                                     <div class="col-xl-3 col-lg-4 col-md-5 tab-style-07 d-flex align-items-start">
@@ -324,10 +321,10 @@ $this->title = "Catalog";
                                             <?php if (!empty($dataProvider2->getModels())): ?>
                                                 <?php foreach ($dataProvider2->getModels() as $index => $model): ?>
                                                     <div
-                                                            class="tab-pane fade in h-100 <?=$index == 0 ? 'active show' : ''?>"
-                                                            id="tab_six<?=$model->id?>"
-                                                            role="tabpanel"
-                                                            aria-labelledby="tab-btn-<?= $model->id ?>"
+                                                        class="tab-pane fade in h-100 <?=$index == 0 ? 'active show' : ''?>"
+                                                        id="tab_six<?=$model->id?>"
+                                                        role="tabpanel"
+                                                        aria-labelledby="tab-btn-<?= $model->id ?>"
                                                     >
                                                         <div class="row h-100">
                                                             <div class="col-md-12 mx-auto rounded-4">
@@ -494,65 +491,3 @@ $this->title = "Catalog";
         </div>
     </div>
 </section>
-<!-- start footer -->
-<footer class="pt-5 pb-5 sm-pt-40px sm-pb-45px footer-dark bg-extra-medium-slate-blue">
-    <div class="container">
-        <div class="row justify-content-center text-center">
-            <div class="col-md-12">
-                <img src="images/newuu/newuu-logo.png" data-at2x="images/newuu/newuu-logo.png" alt="" width="150">
-                <br>
-                <div class="pt-30px">
-                            <span><i class="feather icon-feather-map-pin text-white me-10px"></i> New Uzbekistan University, Conference Hall, UCA Building,
-                            <br> Movarounnahr Street 1, Tashkent, Uzbekistan</span><br>
-                    <a  href="tel:+998 (71) 202-41-11"><i class="feather icon-feather-phone-call text-white me-10px"></i> +998 (71) 202-41-11</a><br>
-                    <a  href="mailto:registrar@newuu.uz"> <i class="feather icon-feather-mail text-white me-10px"></i> registrar@newuu.uz</a></div>
-            </div>
-        </div>
-    </div>
-    </div>
-</footer>
-
-<?php
-$js = <<<JS
-     $(document).ready(function(){
-        $(".tab-pane-custom").on("click", function (e) {
-            e.preventDefault();
-            var target  = $(this).attr("data-bs-target");
-            if ($(this).hasClass("active")) {
-                return;
-            }
-        
-            $(".tab-pane, .tab-pane-custom").removeClass("active show");
-        
-            $(target).addClass("active show");
-            $(this).addClass("active");
-        });
-
-        $("#building").change(function(){
-            var graduate_id = $(this).val();
-            if ($("#building").val() !== "" || $("#room option").length > 1) {
-                $("#step-2").removeClass("d-none");
-            }
-            $("#room").html('<option value="">Search by Department</option>');
-            $.ajax({
-                url: '/catalog/get-departments',
-                type: 'GET',
-                data: { graduate_id: graduate_id },
-                dataType: 'json',
-                success: function(data) {
-                    $.each(data.data, function(index, dept){
-                        $("#room").append('<option value="'+ dept.id +'">'+ dept.name +'</option>');
-                    });
-                    $("#step-2").removeClass("d-none");
-                },
-                error: function(xhr, status, error) {
-                    console.error("Xatolik yuz berdi: " + error);
-                }
-            });
-        });
-    });
-JS;
-$this->registerJs($js , \yii\web\View::POS_END)
-?>
-</body>
-</html>

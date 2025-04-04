@@ -2,7 +2,9 @@
 
 namespace frontend\controllers;
 
+use common\models\CatalogSearch;
 use common\models\Program;
+use common\models\SubjectBoard;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -263,8 +265,121 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionServices()
+    {
+        return $this->render('services');
+    }
+
+    public function actionCalendars()
+    {
+        return $this->render('calendars');
+    }
+
+    public function actionPreRegistration()
+    {
+        return $this->render('pre-registration');
+    }
+
+    public function actionRegistrationInformation()
+    {
+        return $this->render('registration-information');
+    }
+
+    public function actionCurriculum()
+    {
+        $programs = Program::find()->where(['application_type' => 1])->all();
+        $programs2 = Program::find()->where(['application_type' => 2])->all();
+
+        return $this->render('curriculum' , [
+            'programs' => $programs,
+            'programs2' => $programs2,
+        ]);
+    }
+
+    public function actionTransferCredit()
+    {
+        return $this->render('transfer-credit');
+    }
+
     public function actionCatalog()
     {
-        return $this->render('catalog');
+        $searchModel = new CatalogSearch();
+        $catalog_categories = SubjectBoard::find()->all();
+        $params['department'] = Yii::$app->request->get('department');
+        $dataProvider2 = $searchModel->searchByDegree($params);
+        $dataProvider = $searchModel->searchFilter(Yii::$app->request->queryParams);
+        return $this->render('catalog', [
+            'catalog_categories' => $catalog_categories,
+            'dataProvider' => $dataProvider,
+            'dataProvider2' => $dataProvider2
+        ]);
     }
+
+    public function actionPoliciesAndProcedures()
+    {
+        return $this->render('policies-and-procedures');
+    }
+    public function actionAnnouncement()
+    {
+        return $this->render('announcement');
+    }
+
+    public function actionTranscripts()
+    {
+        return $this->render('transcripts');
+    }
+
+    public function actionDiplomas()
+    {
+        return $this->render('diplomas');
+    }
+
+    public function actionRecordsPrivacy()
+    {
+        return $this->render('records-privacy');
+    }
+
+    public function actionPersonalInformation()
+    {
+        return $this->render('personal-information');
+    }
+
+    public function actionSpringDegreeDates()
+    {
+        return $this->render('spring-degree-dates');
+    }
+
+    public function actionGraduateDegreeRequirements()
+    {
+        return $this->render('graduate-degree-requirements');
+    }
+    public function actionUndergraduateDegreeRequirements()
+    {
+        return $this->render('undergraduate-degree-requirements');
+    }
+
+    public function actionAboutAdvising()
+    {
+        return $this->render('about-advising');
+    }
+
+    public function actionMakeAppointment()
+    {
+        return $this->render('make-appointment');
+    }
+
+    public function actionForms()
+    {
+        return $this->render('forms');
+    }
+
+    public function actionFaq()
+    {
+        return $this->render('faq');
+    }
+
+
+
+
+
 }

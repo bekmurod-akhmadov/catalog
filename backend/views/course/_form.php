@@ -1,5 +1,7 @@
 <?php
 
+use common\models\Program;
+use kartik\select2\Select2;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -28,7 +30,33 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'ects')->textInput() ?>
 
-    <?= $form->field($model, 'program_id')->dropDownList($model::getPrograms() , ['prompt' => 'Select...']) ?>
+    <?php
+       echo $form->field($model, 'program_id')->widget(Select2::classname(), [
+            'data' => $model::getPrograms(),
+            'size' => Select2::SMALL,
+            'options' => ['placeholder' => 'Select a color ...', 'multiple' => true],
+           'value' => function($model) {
+               $ids = is_string($model->program_id) ? json_decode($model->program_id, true) : (array) $model->program_id;
+               if (!is_array($ids) || empty($ids)) {
+                   return [];
+               }
+
+               $titles = Program::find()
+                   ->select(['id', 'title'])
+                   ->where(['id' => $ids])
+                   ->indexBy('id')
+                   ->column();
+
+               return $titles;
+           },
+            'pluginOptions' => [
+                'tags' => true,
+                'tokenSeparators' => [',', ' '],
+                'maximumInputLength' => 10
+            ],
+        ])->label('Program');
+    ?>
+<!--    --><?php //= $form->field($model, 'program_id')->dropDownList($model::getPrograms() , ['prompt' => 'Select...']) ?>
 
     <?= $form->field($model, 'year_id')->dropDownList($model::getYears() , ['prompt' => 'Select...']) ?>
 

@@ -12,6 +12,7 @@ use yii\helpers\ArrayHelper;
  * @property string $name
  * @property string|null $description
  * @property int $application_type
+ * @property int $school_type
  */
 class Program extends \yii\db\ActiveRecord
 {
@@ -33,8 +34,8 @@ class Program extends \yii\db\ActiveRecord
         return [
             [['description'], 'default', 'value' => null],
             [['name', 'application_type'], 'required'],
-            [['description'], 'string'],
-            [['application_type'], 'integer'],
+            [['description' ,'ep_code'], 'string'],
+            [['application_type' , 'school_type'], 'integer'],
             [['name'], 'string', 'max' => 255],
         ];
     }
@@ -48,7 +49,9 @@ class Program extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Name',
             'description' => 'Description',
-            'application_type' => 'Application Type',
+            'application_type' => 'Degree Type',
+            'school_type' => 'School',
+            'ep_code' => 'EP Code',
         ];
     }
     public static function getTypes()
@@ -79,6 +82,16 @@ class Program extends \yii\db\ActiveRecord
     public static function getSemesterName(int $id) :string
     {
         return Semester::findOne($id)->semester ?? '';
+    }
+
+    public static function getSchoolsList()
+    {
+        return [
+            1 => 'School of Computing',
+            2 => 'School of Humanities,Natural & Social Sciences',
+            3 => 'School of Engineering',
+            4 => 'School of Management',
+        ];
     }
 }
 

@@ -42,9 +42,22 @@ class Course extends \yii\db\ActiveRecord
             [['prerequisite', 'lecture', 'tutorial_and_lab', 'ects'], 'default', 'value' => null],
             [['status'], 'default', 'value' => 1],
             [['course_code', 'subjectboard_id', 'course_name', 'course_type', 'semester_id','program_id' , 'year_id'], 'required'],
-            [['subjectboard_id', 'course_type', 'lecture', 'tutorial_and_lab', 'ects', 'status', 'semester_id','program_id' , 'year_id'], 'integer'],
+            [['subjectboard_id', 'course_type', 'lecture', 'tutorial_and_lab', 'ects', 'status', 'semester_id' , 'year_id'], 'integer'],
             [['course_code', 'course_name', 'prerequisite'], 'string', 'max' => 255],
+            ['program_id', 'safe'],
+            ['program_id', 'validateJson']
         ];
+    }
+    public function validateJson($attribute, $params)
+    {
+        if (is_array($this->$attribute)) {
+            return;
+        }
+
+        json_decode($this->$attribute);
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            $this->addError($attribute, 'Program ID must be a valid JSON string.');
+        }
     }
 
     /**
@@ -117,5 +130,20 @@ class Course extends \yii\db\ActiveRecord
     {
         return ArrayHelper::map(Semester::find()->all() , 'id' , 'semester');
     }
+
+    public function beforeSave($insert)
+    {
+        if (is_array($this->program_id)) {
+            $this->program_id = json_encode($this->program_id);
+        }
+        return parent::beforeSave($insert);
+    }
+
+    public function afterFind()
+    {
+        $this->program_id = json_decode($this->program_id, true);
+        parent::afterFind();
+    }
+
 
 }

@@ -32,14 +32,23 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'name',
-            'description:ntext',
+            'ep_code',
+
             [
                 'attribute' => 'application_type',
                 'value' => function ($model){
                   if (!empty($model->application_type))
                       return Program::getApplicationTypeLabel($model->application_type);
                 }
-            ]
+            ],
+            [
+                'attribute' => 'school_type',
+                'value' => function ($model){
+                    if (!empty($model->school_type))
+                        return Program::getSchoolsList()[$model->school_type];
+                }
+            ],
+            'description:ntext',
         ],
     ]) ?>
 

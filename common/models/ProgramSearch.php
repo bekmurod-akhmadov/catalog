@@ -17,8 +17,9 @@ class ProgramSearch extends Program
     public function rules()
     {
         return [
-            [['id', 'application_type'], 'integer'],
+            [['id', 'application_type' , 'school_type'], 'integer'],
             [['name', 'description'], 'safe'],
+            [['ep_code'] , 'string']
         ];
     }
 

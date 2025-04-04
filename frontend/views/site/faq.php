@@ -1,259 +1,23 @@
-<section class="section-dark p-0 bg-dark-gray">
-    <div class="swiper lg-no-parallax magic-cursor  full-screen md-h-600px sm-h-500px ipad-top-space-margin swiper-light-pagination" data-slider-options='{ "slidesPerView": 1, "loop": true, "parallax": true, "speed": 1000, "pagination": { "el": ".swiper-pagination-bullets", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 4000, "disableOnInteraction": false },  "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }'>
-
-        <div class="swiper-wrapper">
-            <!-- start slider item -->
-            <div class="swiper-slide overflow-hidden">
-
-                <div class="cover-background position-absolute top-0 start-0 w-100 h-100" data-swiper-parallax="500" style="background-repeat: no-repeat;background-image: url(/images/newuu/img6.jpg);background-position: left !important">
-
-                    <div class="opacity-light bg-gradient-sherpa-blue-black"></div>
-                    <div class="container h-100" data-swiper-parallax="-500">
-                        <div class="row d-flex align-items-center h-100">
-                            <div class="col-xl-12 col-lg-8 col-md-10 position-relative text-white text-center text-md-start" data-anime='{ "el": "childs", "translateX": [100, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-
-                                <h1 class="alt-font fw-600  w-90 xl-w-100 text-shadow-double-large ls-minus-2px fs-85">New Uzbekistan University<br><span class="text-base-color-2">Registrar office</span></h1>
-                                <a href="<?=\yii\helpers\Url::to(['/site/about'])?>" target="_blank" class="btn btn-extra-large btn-rounded with-rounded border-light text-start text-white btn-box-shadow box-shadow-extra-large mt-20px sm-mt-0">About Us
-                                    <div class="arrow">
-                                        <span></span>
-                                        <span></span>
-
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+<section class="page-title-big-typography bg-dark-gray ipad-top-space-margin cover-background" data-parallax-background-ratio="0.5" style="background-repeat: no-repeat;background-image: url(images/newuu/breadcrump2.jpg);">
+    <div class="opacity-very-light bg-dark-slate-blue"></div>
+    <div class="container">
+        <div class="row align-items-center justify-content-center extra-small-screen">
+            <div class="col-12 position-relative text-center page-title-extra-large">
+                <h1 class="m-auto text-white text-shadow-double-large fw-500 ls-minus-3px xs-ls-minus-2px" data-anime='{ "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>FAQ</h1>
+            </div>
+            <div class="down-section text-center" data-anime='{ "translateY": [-15, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                <a href="#" aria-label="scroll down" class="section-link">
+                    <div class="d-flex justify-content-center align-items-center mx-auto rounded-circle fs-30 text-white">
+                        <i class="feather icon-feather-chevron-down"></i>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
-        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"></div>
     </div>
 </section>
-<!-- end section -->
-<!-- start section -->
-<section class="border-bottom border-color-extra-medium-gray pt-40px pb-40px overflow-hidden">
+<section>
     <div class="container-fluid">
-        <div class="col-md-12 mx-auto">
-            <div class="row row-cols-1 row-cols-lg-6 row-cols-sm-2 justify-content-center align-items-center" data-anime='{ "el": "childs", "translateX": [-15, 0], "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                <!-- start features box item -->
-                <div class="col icon-with-text-style-08 md-mb-30px text-center text-sm-center">
-                    <div class="feature-box feature-box-left-icon-middle d-inline-flex align-middle">
-                        <div class="feature-box-icon me-10px">
-                            <i class="bi bi-shield-check icon-very-medium text-base-color"></i>
-                        </div>
-                        <div class="feature-box-content">
-                            <span class="alt-font fw-500 text-dark-gray d-block lh-26">Providing Academic Support</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- end features box item -->
-                <!-- start features box item -->
-                <div class="col icon-with-text-style-08 md-mb-30px text-center text-sm-center">
-                    <div class="feature-box feature-box-left-icon-middle d-inline-flex align-middle">
-                        <div class="feature-box-icon me-10px">
-                            <i class="bi bi-briefcase icon-very-medium text-base-color"></i>
-                        </div>
-                        <div class="feature-box-content">
-                            <span class="alt-font fw-500 text-dark-gray d-block lh-26">Student Records Management</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- end features box item -->
-                <!-- start features box item -->
-                <div class="col icon-with-text-style-08 xs-mb-30px text-center text-sm-center">
-                    <div class="feature-box feature-box-left-icon-middle d-inline-flex align-middle">
-                        <div class="feature-box-icon me-10px">
-                            <i class="bi bi-award icon-very-medium text-base-color"></i>
-                        </div>
-                        <div class="feature-box-content">
-                            <span class="alt-font fw-500 text-dark-gray d-block lh-26">Graduation Processing</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- end features box item -->
-                <!-- start features box item -->
-                <div class="col icon-with-text-style-08 text-center text-sm-center">
-                    <div class="feature-box feature-box-left-icon-middle d-inline-flex align-middle">
-                        <div class="feature-box-icon me-10px">
-                            <i class="bi bi-briefcase icon-very-medium text-base-color"></i>
-                        </div>
-                        <div class="feature-box-content">
-                            <span class="alt-font fw-500 text-dark-gray d-block lh-26">Transcript and Certification Services</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- end features box item -->
-                <div class="col icon-with-text-style-08 md-mb-30px text-center text-sm-center">
-                    <div class="feature-box feature-box-left-icon-middle d-inline-flex align-middle">
-                        <div class="feature-box-icon me-10px">
-                            <i class="bi bi-shield-check icon-very-medium text-base-color"></i>
-                        </div>
-                        <div class="feature-box-content">
-                            <span class="alt-font fw-500 text-dark-gray d-block lh-26">Maintaining Accurate Records</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col icon-with-text-style-08 xs-mb-30px text-center text-sm-center">
-                    <div class="feature-box feature-box-left-icon-middle d-inline-flex align-middle">
-                        <div class="feature-box-icon me-10px">
-                            <i class="bi bi-award icon-very-medium text-base-color"></i>
-                        </div>
-                        <div class="feature-box-content">
-                            <span class="alt-font fw-500 text-dark-gray d-block lh-26">Facilitating Graduation</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="pt-0 mt-0">
-    <div class="container-fluid pt-3">
-        <div class="col-lg-9 mx-auto">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="row">
-                        <h3 class="fw-semibold text-base-color ps-0">Registrar’s Office</h3>
-                        <p class="ps-0 text-dark">The Registrar’s Office is responsible for various academic and administrative tasks</p>
-                    </div>
-                    <div class="row mb-4">
-                        <div class="blog-box d-md-flex d-block flex-row h-100 border-radius-6px overflow-hidden box-shadow-extra-large p-0">
-                            <div class="blog-image w-25 sm-w-100 cover-background" style="background-image: url('/images/newuu/register-1.png');background-size: cover"></div>
-                            <div class="blog-content w-75 sm-w-100 pt-50px pb-40px ps-40px pe-40px xl-p-30px bg-white d-flex flex-column justify-content-center align-items-start last-paragraph-no-margin">
-                                <a href="registration-information.html" class="categories-btn bg-success text-white text-uppercase fw-500 mb-30px">Class Schedule</a>
-                                <a href="registration-information.html" class="card-title text-dark-gray text-dark-gray-hover mb-5px fw-600 fs-18 lh-28">The Course Schedule is published before advising and registration begin for each semester and summer session...</a>
-                                <a href="registration-information.html" class="link-success">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row my-4">
-                        <div class="blog-box d-md-flex d-block flex-row h-100 border-radius-6px overflow-hidden box-shadow-extra-large p-0">
-                            <div class="blog-image w-25 sm-w-100 cover-background" style="background-image: url('/images/newuu/register-2.png');background-size: cover"></div>
-                            <div class="blog-content w-75 sm-w-100 pt-50px pb-40px ps-40px pe-40px xl-p-30px bg-white d-flex flex-column justify-content-center align-items-start last-paragraph-no-margin">
-                                <a href="calendars.html" class="categories-btn bg-success text-white text-uppercase fw-500 mb-30px">Calendars</a>
-                                <a href="calendars.html" class="card-title text-dark-gray text-dark-gray-hover mb-5px fw-600 fs-18 lh-28">Additional details about the Academic Calendar can be found in the General Information Catalog...</a>
-                                <a href="calendars.html" class="link-success">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row my-4">
-                        <div class="blog-box d-md-flex d-block flex-row h-100 border-radius-6px overflow-hidden box-shadow-extra-large p-0">
-                            <div class="blog-image w-25 sm-w-100 cover-background" style="background-image: url('/images/newuu/register-3.png');background-size: cover"></div>
-                            <div class="blog-content w-75 sm-w-100 pt-50px pb-40px ps-40px pe-40px xl-p-30px bg-white d-flex flex-column justify-content-center align-items-start last-paragraph-no-margin">
-                                <a href="catalog.html" class="categories-btn bg-success text-white text-uppercase fw-500 mb-30px">Course Catalog</a>
-                                <a href="catalog.html" class="card-title text-dark-gray text-dark-gray-hover mb-5px fw-600 fs-18 lh-28">The catalog of the University is the document of authority for all students. Any academic unit...</a>
-                                <a href="catalog.html" class="link-success">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row my-4">
-                        <div class="blog-box d-md-flex d-block flex-row h-100 border-radius-6px overflow-hidden box-shadow-extra-large p-0">
-                            <div class="blog-image w-25 sm-w-100 cover-background" style="background-image: url('/images/newuu/register-4.png');background-size: cover"></div>
-                            <div class="blog-content w-75 sm-w-100 pt-50px pb-40px ps-40px pe-40px xl-p-30px bg-white d-flex flex-column justify-content-center align-items-start last-paragraph-no-margin">
-                                <a href="services.html" class="categories-btn bg-success text-white text-uppercase fw-500 mb-30px">Services</a>
-                                <a href="services.html" class="card-title text-dark-gray text-dark-gray-hover mb-5px fw-600 fs-18 lh-28">Our services may ask for confidential information, so you'll need student...</a>
-                                <a href="services.html" class="link-success  pb-3">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-1">
-                </div>
-                <div class="col-md-3">
-                    <div class="position-sticky d-flex flex-column" style="top: 2rem;">
-                        <div class="p-4 mb-3 shadow rounded bg-white">
-                            <p class="mb-0 text-dark text-justify fs-17">Welcome to the Registrar's Office at New Uzbekistan University. Our mission is to provide comprehensive support to students, faculty, and staff in all matters related to academic records, course registration, and academic policies. We are committed to maintaining the integrity, accuracy, and confidentiality of academic records while delivering exceptional service to our university community.</p>
-                        </div>
-                        <a href="#announcements" class="w-100 bg-base-color text-white rounded p-3 my-2">Announcements</a>
-                        <a href="#faq" class="w-100 bg-base-color text-white rounded p-3 my-2">FAQ</a>
-                        <a href="#contact" class="w-100 bg-base-color text-white rounded p-3 my-2">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid pt-5">
-        <div class="col-lg-9 mx-auto">
-            <div class="row mb-2 border-top pt-2" id="announcements">
-                <h3 class="ps-0 text-base-color fw-semibold">Announcements</h3>
-            </div>
-            <div class="row">
-                <ul class="blog-date blog-wrapper grid grid-2col xl-grid-3col lg-grid-2col md-grid-2col sm-grid-1col xs-grid-1col gutter-extra-large" style="position: relative;">
-                    <li class="grid-sizer"></li>
-                    <!-- start blog item -->
-                    <li class="grid-item" style="position: absolute; left: 0%; top: 0px;">
-                        <div class="feature-box border-radius-10px feature-box-left-icon bg-white box-shadow-extra-large box-shadow-extra-large-hover p-5 last-paragraph-no-margin">
-                            <div class="feature-box-icon">
-                                <time class="text-center post-date border-radius-3px bg-base-color text-white text-uppercase fw-500 d-inline-block">
-                                    <span class="date d-block fs-30 lh-28">3-7</span>
-                                    <span class="month d-block lh-24">Mar</span>
-                                </time>
-                            </div>
-                            <div class="feature-box-content">
-                                <div class="alt-font fs-13 lh-24 text-uppercase mb-5px d-inline-block text-base-color fw-700">#EXAM  #MIDTERM #SCHEDULE</div>
-                                <a href="demo-web-agency-blog-single-creative.html" class="card-title text-dark-gray text-dark-gray-hover mb-10px fs-18 lh-28 fw-600 d-block">Dear Students, Please open the exam Guidebook in the link below</a>
-                                <p>❗️Information updates (exam schedule, exam attendance)</p>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- end blog item -->
-                    <!-- start blog item -->
-                    <li class="grid-item" style="position: absolute; left: 33.3296%; top: 0px;">
-                        <div class="feature-box border-radius-10px feature-box-left-icon bg-white box-shadow-extra-large box-shadow-extra-large-hover p-5 last-paragraph-no-margin">
-                            <div class="feature-box-icon">
-                                <time class="text-center post-date border-radius-3px bg-base-color text-white text-uppercase fw-500 d-inline-block">
-                                    <span class="date d-block fs-30 lh-28">18</span>
-                                    <span class="month d-block lh-24">Feb</span>
-                                </time>
-                            </div>
-                            <div class="feature-box-content">
-                                <div class="alt-font fs-13 lh-24 text-uppercase mb-5px d-inline-block text-base-color fw-700">🚀 Exciting Lecture Alert!  🚀</div>
-                                <a href="demo-web-agency-blog-single-creative.html" class="card-title text-dark-gray text-dark-gray-hover mb-10px fs-18 lh-28 fw-600 d-block">Acoustic Metastructures and Acoustomechanics</a>
-                                <p>Get ready for an unmissable lecture by Mihail Petrovk, Assistant Professor</p>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- end blog item -->
-                    <!-- start blog item -->
-                    <li class="grid-item" style="position: absolute; left: 66.6591%; top: 0px;">
-                        <div class="feature-box border-radius-10px feature-box-left-icon bg-white box-shadow-extra-large box-shadow-extra-large-hover p-5 last-paragraph-no-margin">
-                            <div class="feature-box-icon">
-                                <time class="text-center post-date border-radius-3px bg-base-color text-white text-uppercase fw-500 d-inline-block">
-                                    <span class="date d-block fs-30 lh-28">28</span>
-                                    <span class="month d-block lh-24">Feb</span>
-                                </time>
-                            </div>
-                            <div class="feature-box-content">
-                                <div class="alt-font fs-13 lh-24 text-uppercase mb-5px d-inline-block text-base-color fw-700">Annual Internship Program 2025!</div>
-                                <a href="demo-web-agency-blog-single-creative.html" class="card-title text-dark-gray text-dark-gray-hover mb-10px fs-18 lh-28 fw-600 d-block">We are excited to announce that Huawei opens application</a>
-                                <p>For more details about operation and activities of Huawei in Uzbekistan please</p>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- end blog item -->
-                    <!-- start blog item -->
-                    <li class="grid-item" style="position: absolute; left: 0%; top: 311.067px;">
-                        <div class="feature-box border-radius-10px feature-box-left-icon bg-white box-shadow-extra-large box-shadow-extra-large-hover p-5 last-paragraph-no-margin">
-                            <div class="feature-box-icon">
-                                <time class="text-center post-date border-radius-3px bg-base-color text-white text-uppercase fw-500 d-inline-block">
-                                    <span class="date d-block fs-30 lh-28">21</span>
-                                    <span class="month d-block lh-24">Feb</span>
-                                </time>
-                            </div>
-                            <div class="feature-box-content">
-                                <div class="alt-font fs-13 lh-24 text-uppercase mb-5px d-inline-block text-base-color fw-700">IT'S OFFICIAL! </div>
-                                <a href="demo-web-agency-blog-single-creative.html" class="card-title text-dark-gray text-dark-gray-hover mb-10px fs-18 lh-28 fw-600 d-block">Exchange Semester Abroad Application is On! </a>
-                                <p>Current 2nd and 3rd year students are invited to fill in the form</p>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- end blog item -->
-                </ul>
-                <a href="announcement.html" class="btn bg-base-color text-white hover-base mx-auto mt-3 btn-large btn-rounded d-table d-lg-inline-block lg-mb-15px md-mx-auto">View More</a>
-            </div>
-            <div class="row mt-5 border-top pt-2" id="faq">
-                <h3 class="fw-semibold text-base-color">Frequently Asked Questions</h3>
-            </div>
+        <div class="col-md-9 mx-auto">
             <div class="row mt-3">
                 <div class="col-xl-3 col-lg-4 tab-style-07 md-mb-50px sm-mb-35px appear anime-complete" data-anime="{ &quot;translate&quot;: [50, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 600, &quot;delay&quot;:100, &quot;staggervalue&quot;: 150, &quot;easing&quot;: &quot;easeOutQuad&quot; }" style="translate: 0px;">
                     <div class="position-sticky top-50px">
@@ -1140,7 +904,7 @@
                                                     </div>
                                                 </a>
                                             </div>
-                                            <div id="accordion-style-06-02" class="accordion-collapse collapse " data-bs-parent="#accordion-style-06">
+                                            <div id="accordion-style-06-02" class="accordion-collapse collapse" data-bs-parent="#accordion-style-06">
                                                 <div class="accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray">
                                                     <p>Exam guide book contains complete information about exam types. You should read the guide book attentively.</p>
                                                     <div class="row my-4">
@@ -1256,40 +1020,6 @@
                             </div>
                         </div>
                         <!-- end tab content -->
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5 shadow p-4 rounded-4" id="contact">
-                <div class="row align-items-end justify-content-center mb-6 text-center text-lg-start sm-mb-8">
-                    <div class="col-xl-5 col-lg-7 col-md-10 md-mb-25px appear anime-child anime-complete" data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 600, &quot;delay&quot;:0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
-                        <span class=" pe-25px mb-20px text-uppercase text-base-color fs-14 lh-42px fw-700 border-radius-100px bg-gradient-very-light-gray-transparent d-inline-block" style="">Contact</span>
-                        <h3 class="text-base-color fw-700 ls-minus-1px mb-0" style="">Need Assistance?</h3>
-                    </div>
-                    <div class="col-xl-6 offset-xl-1 col-lg-5 col-md-10 last-paragraph-no-margin">
-                        <p class="w-90 lg-w-100 appear words lines splitting anime-child anime-complete" data-anime="{ &quot;el&quot;: &quot;lines&quot;, &quot;translateY&quot;: [30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 600, &quot;delay&quot;:0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }" style="--word-total: 31; --line-total: 3;"><span class="d-inline" style="will-change: inherit;">We encourage students to reach out to the Registrar's Office for assistance with any academic administrative needs. Our dedicated team is here to support your educational journey at New Uzbekistan University.</span></p>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-xl-4 row-cols-lg-4 row-cols-md-2 row-cols-sm-2 mb-6 appear anime-child anime-complete" data-anime="{ &quot;el&quot;: &quot;childs&quot;, &quot;translateY&quot;: [30, 0], &quot;opacity&quot;: [0,1], &quot;duration&quot;: 600, &quot;delay&quot;:0, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutQuad&quot; }">
-                    <div class="col md-mb-30px text-center text-sm-start" style="">
-                        <span class="alt-font fs-30 fw-700 d-block w-90 text-dark-gray border-bottom border-2 border-color-dark-gray pb-15px mb-15px xs-w-100"><i class="feather icon-feather-map-pin d-inline-block icon-medium me-10px"></i>Address</span>
-                        <div class="last-paragraph-no-margin">
-                            <p>New Uzbekistan University, U.C.A building, Room 103
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col md-mb-30px text-center text-sm-start" style="">
-                        <span class="alt-font fs-30 fw-700 d-block w-90 text-dark-gray border-bottom border-2 border-color-dark-gray pb-15px mb-15px xs-w-100"><i class="feather icon-feather-mail d-inline-block icon-medium me-10px"></i>Email</span>
-                        <a href="mailto:registrar@newuu.uz">registrar@newuu.uz</a>
-                    </div>
-                    <div class="col xs-mb-30px text-center text-sm-start" style="">
-                        <span class="alt-font fs-30 fw-700 d-block w-90 text-dark-gray border-bottom border-2 border-color-dark-gray pb-15px mb-15px xs-w-100"><i class="feather icon-feather-phone d-inline-block icon-medium me-10px"></i>Phone</span>
-                        <a href="tel:+998 (71) 202-41-11">+998 (71) 202-41-11</a><br>
-                        <span>internal numbers: 181, 183, 185, 186, 187</span>
-
-                    </div>
-                    <div class="col text-center text-sm-start" style="">
-                        <span class="alt-font fs-30 fw-700 d-block w-90 text-dark-gray border-bottom border-2 border-color-dark-gray pb-15px mb-15px xs-w-100"><i class="fa-brands fa-telegram d-inline-block icon-medium me-10px"></i>Telegram</span>
-                        <a href="https://t.me/@nuuacademicofficebot">@nuuacademicofficebot</a><br>
                     </div>
                 </div>
             </div>
