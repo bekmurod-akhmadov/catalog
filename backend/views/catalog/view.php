@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="catalog-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h3><?= Html::encode($this->title) ?></h3>
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
@@ -26,36 +26,40 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
     </p>
 
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id',
-            'subject_board',
-            'course_name',
-            'department',
-            'description:ntext',
-            'course_code',
-            'prerequisite',
-            'lecture_hours',
-            'tutorials_hours',
-            'lab_hours',
-            'semester',
-            'ects_credit',
-            'us_credit',
-            'degree',
-            'syllabus_template',
-            'term',
-            'part_of_team',
-            'format',
-            'section_status',
-            'maximum_enrollment',
-            'seats_avail',
-            'waitlist_total',
-            'last_day_to_register',
-            'instructor',
-            'meeting_info',
-            'notes',
-        ],
-    ]) ?>
+    <div class="card">
+        <div class="card-body">
+            <?= DetailView::widget([
+                'model' => $model,
+                'attributes' => [
+                    'id',
+                    'subject_board',
+                    'course_name',
+                    'department',
+                    'description:ntext',
+                    'course_code',
+                    'prerequisite',
+                    'lecture_hours',
+                    'tutorials_hours',
+                    'lab_hours',
+                    'semester',
+                    'ects_credit',
+                    'us_credit',
+                    'degree',
+                    'syllabus_template',
+                    'term',
+                    'part_of_team',
+                    'format',
+                    'section_status',
+                    'maximum_enrollment',
+                    'seats_avail',
+                    'waitlist_total',
+                    'last_day_to_register',
+                    'instructor',
+                    'meeting_info',
+                    'notes',
+                ],
+            ]) ?>
+        </div>
+    </div>
 
 </div>

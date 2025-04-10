@@ -4,6 +4,7 @@ namespace common\models;
 
 use Yii;
 use yii\helpers\ArrayHelper;
+use yii\helpers\Html;
 
 /**
  * This is the model class for table "course".
@@ -68,7 +69,7 @@ class Course extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'course_code' => 'Course Code',
-            'subjectboard_id' => 'Subjectboard ID',
+            'subjectboard_id' => 'Subjectboard',
             'course_name' => 'Course Name',
             'course_type' => 'Course Type',
             'prerequisite' => 'Prerequisite',
@@ -76,7 +77,7 @@ class Course extends \yii\db\ActiveRecord
             'tutorial_and_lab' => 'Tutorial And Lab',
             'ects' => 'Ects',
             'status' => 'Status',
-            'semester_id' => 'Semester ID',
+            'semester_id' => 'Semester',
             'program_id' => 'Program',
             'year_id' => 'Year',
         ];
@@ -145,5 +146,29 @@ class Course extends \yii\db\ActiveRecord
         parent::afterFind();
     }
 
+    public static function  getCatalogList()
+    {
+        return ArrayHelper::map(Catalog::find()->all() , 'id' , 'course_code');
+    }
 
+    public function getProgramsById(): string
+    {
+        if (!empty($this->program_id)) {
+            // Programma ma'lumotlarini olish
+            $programs = Program::find()
+                ->select(['id', 'name'])
+                ->where(['id' => $this->program_id])
+                ->all();
+
+            if (!empty($programs)) {
+                $html_content = '';
+                foreach ($programs as $program) {
+                    $html_content .= "<span class='badge badge-info bg-info mx-1'>" . Html::encode($program->name) . "</span>";
+                }
+                return $html_content;
+            }
+        }
+
+        return '';
+    }
 }

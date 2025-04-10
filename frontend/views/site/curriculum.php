@@ -70,8 +70,6 @@ $this->title = 'Curriculum';
                                         <?php if (!empty($programs)):?>
                                             <?php foreach ($programs as $index => $program):?>
                                                 <?php
-
-
                                                 $courses = (new Query())
                                                     ->select([
                                                         'y.id as year_id',
@@ -91,7 +89,7 @@ $this->title = 'Curriculum';
                                                     ])
                                                     ->from('course c')
                                                     ->innerJoin('year y', 'c.year_id = y.id')
-                                                    ->where(['c.program_id' => $program->id])
+                                                    ->where(['like', 'program_id', '"'.$program->id.'"'])
                                                     ->groupBy('y.id')
                                                     ->all();
                                                 ?>
@@ -192,7 +190,7 @@ $this->title = 'Curriculum';
                                                     ])
                                                     ->from('course c')
                                                     ->innerJoin('year y', 'c.year_id = y.id')
-                                                    ->where(['c.program_id' => $program->id])
+                                                    ->where(['like', 'program_id', '"'.$program->id.'"'])
                                                     ->groupBy('y.id')
                                                     ->all();
                                                 ?>

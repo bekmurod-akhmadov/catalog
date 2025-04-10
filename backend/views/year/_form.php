@@ -12,10 +12,14 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'year')->textInput(['maxlength' => true]) ?>
+    <div class="card">
+        <div class="card-body">
+            <?= $form->field($model, 'year')->textInput(['maxlength' => true]) ?>
 
-    <div class="form-group mt-2">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+            <div class="form-group mt-2">
+                <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+            </div>
+        </div>
     </div>
 
     <?php ActiveForm::end(); ?>

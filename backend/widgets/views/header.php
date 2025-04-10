@@ -1,4 +1,4 @@
-<nav class="app-header navbar navbar-expand bg-body">
+<nav class="app-header navbar navbar-expand bg-body mb-3">
     <!--begin::Container-->
     <div class="container-fluid">
         <!--begin::Start Navbar Links-->
@@ -14,11 +14,6 @@
         <ul class="navbar-nav ms-auto">
             <li class="nav-item dropdown user-menu">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                    <img
-                        src="/img/user2-160x160.jpg"
-                        class="user-image rounded-circle shadow"
-                        alt="User Image"
-                    />
                     <span class="d-none d-md-inline"><?=!empty($user) ? $user->username : ''?></span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">

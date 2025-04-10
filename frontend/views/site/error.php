@@ -12,7 +12,7 @@ $this->title = $name;
 <div class="container" style="margin-top: 200px">
     <div class="site-error">
 
-        <h1><?= Html::encode($this->title) ?></h1>
+        <h3><?= Html::encode($this->title) ?></h3>
 
 <!--        <div class="alert alert-danger">-->
 <!--            --><?php //= nl2br(Html::encode($message)) ?>

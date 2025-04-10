@@ -120,9 +120,9 @@
                         <div class="blog-box d-md-flex d-block flex-row h-100 border-radius-6px overflow-hidden box-shadow-extra-large p-0">
                             <div class="blog-image w-25 sm-w-100 cover-background" style="background-image: url('/images/newuu/register-1.png');background-size: cover"></div>
                             <div class="blog-content w-75 sm-w-100 pt-50px pb-40px ps-40px pe-40px xl-p-30px bg-white d-flex flex-column justify-content-center align-items-start last-paragraph-no-margin">
-                                <a href="registration-information.html" class="categories-btn bg-success text-white text-uppercase fw-500 mb-30px">Class Schedule</a>
-                                <a href="registration-information.html" class="card-title text-dark-gray text-dark-gray-hover mb-5px fw-600 fs-18 lh-28">The Course Schedule is published before advising and registration begin for each semester and summer session...</a>
-                                <a href="registration-information.html" class="link-success">Learn More</a>
+                                <a href="<?=\yii\helpers\Url::to(['/site/registration-information'])?>" class="categories-btn bg-success text-white text-uppercase fw-500 mb-30px">Class Schedule</a>
+                                <a href="<?=\yii\helpers\Url::to(['/site/registration-information'])?>" class="card-title text-dark-gray text-dark-gray-hover mb-5px fw-600 fs-18 lh-28">The Course Schedule is published before advising and registration begin for each semester and summer session...</a>
+                                <a href="<?=\yii\helpers\Url::to(['/site/registration-information'])?>" class="link-success">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -130,9 +130,9 @@
                         <div class="blog-box d-md-flex d-block flex-row h-100 border-radius-6px overflow-hidden box-shadow-extra-large p-0">
                             <div class="blog-image w-25 sm-w-100 cover-background" style="background-image: url('/images/newuu/register-2.png');background-size: cover"></div>
                             <div class="blog-content w-75 sm-w-100 pt-50px pb-40px ps-40px pe-40px xl-p-30px bg-white d-flex flex-column justify-content-center align-items-start last-paragraph-no-margin">
-                                <a href="calendars.html" class="categories-btn bg-success text-white text-uppercase fw-500 mb-30px">Calendars</a>
-                                <a href="calendars.html" class="card-title text-dark-gray text-dark-gray-hover mb-5px fw-600 fs-18 lh-28">Additional details about the Academic Calendar can be found in the General Information Catalog...</a>
-                                <a href="calendars.html" class="link-success">Learn More</a>
+                                <a href="<?=\yii\helpers\Url::to(['/site/calendars'])?>" class="categories-btn bg-success text-white text-uppercase fw-500 mb-30px">Calendars</a>
+                                <a href="<?=\yii\helpers\Url::to(['/site/calendars'])?>" class="card-title text-dark-gray text-dark-gray-hover mb-5px fw-600 fs-18 lh-28">Additional details about the Academic Calendar can be found in the General Information Catalog...</a>
+                                <a href="<?=\yii\helpers\Url::to(['/site/calendars'])?>" class="link-success">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -140,9 +140,9 @@
                         <div class="blog-box d-md-flex d-block flex-row h-100 border-radius-6px overflow-hidden box-shadow-extra-large p-0">
                             <div class="blog-image w-25 sm-w-100 cover-background" style="background-image: url('/images/newuu/register-3.png');background-size: cover"></div>
                             <div class="blog-content w-75 sm-w-100 pt-50px pb-40px ps-40px pe-40px xl-p-30px bg-white d-flex flex-column justify-content-center align-items-start last-paragraph-no-margin">
-                                <a href="catalog.html" class="categories-btn bg-success text-white text-uppercase fw-500 mb-30px">Course Catalog</a>
-                                <a href="catalog.html" class="card-title text-dark-gray text-dark-gray-hover mb-5px fw-600 fs-18 lh-28">The catalog of the University is the document of authority for all students. Any academic unit...</a>
-                                <a href="catalog.html" class="link-success">Learn More</a>
+                                <a href="<?=\yii\helpers\Url::to(['/site/catalog'])?>" class="categories-btn bg-success text-white text-uppercase fw-500 mb-30px">Course Catalog</a>
+                                <a href="<?=\yii\helpers\Url::to(['/site/catalog'])?>" class="card-title text-dark-gray text-dark-gray-hover mb-5px fw-600 fs-18 lh-28">The catalog of the University is the document of authority for all students. Any academic unit...</a>
+                                <a href="<?=\yii\helpers\Url::to(['/site/catalog'])?>" class="link-success">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -150,9 +150,9 @@
                         <div class="blog-box d-md-flex d-block flex-row h-100 border-radius-6px overflow-hidden box-shadow-extra-large p-0">
                             <div class="blog-image w-25 sm-w-100 cover-background" style="background-image: url('/images/newuu/register-4.png');background-size: cover"></div>
                             <div class="blog-content w-75 sm-w-100 pt-50px pb-40px ps-40px pe-40px xl-p-30px bg-white d-flex flex-column justify-content-center align-items-start last-paragraph-no-margin">
-                                <a href="services.html" class="categories-btn bg-success text-white text-uppercase fw-500 mb-30px">Services</a>
-                                <a href="services.html" class="card-title text-dark-gray text-dark-gray-hover mb-5px fw-600 fs-18 lh-28">Our services may ask for confidential information, so you'll need student...</a>
-                                <a href="services.html" class="link-success  pb-3">Learn More</a>
+                                <a href="<?=\yii\helpers\Url::to(['/site/services'])?>" class="categories-btn bg-success text-white text-uppercase fw-500 mb-30px">Services</a>
+                                <a href="<?=\yii\helpers\Url::to(['/site/services'])?>" class="card-title text-dark-gray text-dark-gray-hover mb-5px fw-600 fs-18 lh-28">Our services may ask for confidential information, so you'll need student...</a>
+                                <a href="<?=\yii\helpers\Url::to(['/site/services'])?>" class="link-success  pb-3">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -191,7 +191,7 @@
                             </div>
                             <div class="feature-box-content">
                                 <div class="alt-font fs-13 lh-24 text-uppercase mb-5px d-inline-block text-base-color fw-700">#EXAM  #MIDTERM #SCHEDULE</div>
-                                <a href="demo-web-agency-blog-single-creative.html" class="card-title text-dark-gray text-dark-gray-hover mb-10px fs-18 lh-28 fw-600 d-block">Dear Students, Please open the exam Guidebook in the link below</a>
+                                <a href="#" class="card-title text-dark-gray text-dark-gray-hover mb-10px fs-18 lh-28 fw-600 d-block">Dear Students, Please open the exam Guidebook in the link below</a>
                                 <p>❗️Information updates (exam schedule, exam attendance)</p>
                             </div>
                         </div>
@@ -208,7 +208,7 @@
                             </div>
                             <div class="feature-box-content">
                                 <div class="alt-font fs-13 lh-24 text-uppercase mb-5px d-inline-block text-base-color fw-700">🚀 Exciting Lecture Alert!  🚀</div>
-                                <a href="demo-web-agency-blog-single-creative.html" class="card-title text-dark-gray text-dark-gray-hover mb-10px fs-18 lh-28 fw-600 d-block">Acoustic Metastructures and Acoustomechanics</a>
+                                <a href="#" class="card-title text-dark-gray text-dark-gray-hover mb-10px fs-18 lh-28 fw-600 d-block">Acoustic Metastructures and Acoustomechanics</a>
                                 <p>Get ready for an unmissable lecture by Mihail Petrovk, Assistant Professor</p>
                             </div>
                         </div>
@@ -225,7 +225,7 @@
                             </div>
                             <div class="feature-box-content">
                                 <div class="alt-font fs-13 lh-24 text-uppercase mb-5px d-inline-block text-base-color fw-700">Annual Internship Program 2025!</div>
-                                <a href="demo-web-agency-blog-single-creative.html" class="card-title text-dark-gray text-dark-gray-hover mb-10px fs-18 lh-28 fw-600 d-block">We are excited to announce that Huawei opens application</a>
+                                <a href="#" class="card-title text-dark-gray text-dark-gray-hover mb-10px fs-18 lh-28 fw-600 d-block">We are excited to announce that Huawei opens application</a>
                                 <p>For more details about operation and activities of Huawei in Uzbekistan please</p>
                             </div>
                         </div>
@@ -242,14 +242,14 @@
                             </div>
                             <div class="feature-box-content">
                                 <div class="alt-font fs-13 lh-24 text-uppercase mb-5px d-inline-block text-base-color fw-700">IT'S OFFICIAL! </div>
-                                <a href="demo-web-agency-blog-single-creative.html" class="card-title text-dark-gray text-dark-gray-hover mb-10px fs-18 lh-28 fw-600 d-block">Exchange Semester Abroad Application is On! </a>
+                                <a href="#  " class="card-title text-dark-gray text-dark-gray-hover mb-10px fs-18 lh-28 fw-600 d-block">Exchange Semester Abroad Application is On! </a>
                                 <p>Current 2nd and 3rd year students are invited to fill in the form</p>
                             </div>
                         </div>
                     </li>
                     <!-- end blog item -->
                 </ul>
-                <a href="announcement.html" class="btn bg-base-color text-white hover-base mx-auto mt-3 btn-large btn-rounded d-table d-lg-inline-block lg-mb-15px md-mx-auto">View More</a>
+                <a href="<?=\yii\helpers\Url::to(['/site/announcement'])?>" class="btn bg-base-color text-white hover-base mx-auto mt-3 btn-large btn-rounded d-table d-lg-inline-block lg-mb-15px md-mx-auto">View More</a>
             </div>
             <div class="row mt-5 border-top pt-2" id="faq">
                 <h3 class="fw-semibold text-base-color">Frequently Asked Questions</h3>

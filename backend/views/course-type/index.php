@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="course-type-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h3><?= Html::encode($this->title) ?></h3>
 
     <p>
         <?= Html::a('Create Course Type', ['create'], ['class' => 'btn btn-success']) ?>
@@ -35,7 +35,30 @@ $this->params['breadcrumbs'][] = $this->title;
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, CourseType $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
-                 }
+                },
+                'template' => '{view} {update} {delete}',
+                'buttons' => [
+                    'view' => function ($url, $model, $key) {
+                        return Html::a('<i class="fa fa-eye"></i>', $url, [
+                            'title' => 'Ko‘rish',
+                            'class' => 'btn btn-sm btn-primary me-1',
+                        ]);
+                    },
+                    'update' => function ($url, $model, $key) {
+                        return Html::a('<i class="fa fa-edit"></i>', $url, [
+                            'title' => 'Tahrirlash',
+                            'class' => 'btn btn-sm btn-success me-1',
+                        ]);
+                    },
+                    'delete' => function ($url, $model, $key) {
+                        return Html::a('<i class="fa fa-trash"></i>', $url, [
+                            'title' => 'O‘chirish',
+                            'class' => 'btn btn-sm btn-danger me-1',
+                            'data-confirm' => 'Rostdan ham o‘chirmoqchimisiz?',
+                            'data-method' => 'post',
+                        ]);
+                    },
+                ],
             ],
         ],
     ]); ?>

@@ -2,8 +2,10 @@
 
 namespace backend\controllers;
 
+use common\models\Catalog;
 use common\models\Course;
 use common\models\CourseSearch;
+use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -24,7 +26,7 @@ class CourseController extends Controller
             [
                 'access' => [
                     'class' => AccessControl::class,
-                    'only' => ['index', 'view', 'create', 'update', 'delete'],
+                    'only' => ['index', 'view', 'create', 'update', 'delete' , 'get-catalog'],
                     'rules' => [
                         [
                             'allow' => true,
@@ -142,4 +144,23 @@ class CourseController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
+    public function actionGetCatalog($catalog_id)
+    {
+        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        $catalog = Catalog::findOne($catalog_id);
+        if($catalog){
+            return [
+                'course_name' => $catalog->course_name,
+                'subjectboard_id' => $catalog->subject_board,
+                'course_type' => $catalog->course_type,
+                'prerequisite' => $catalog->prerequisite,
+                'lecture' => $catalog->lecture_hours,
+                'tutorial_and_lab' => $catalog->lab_hours,
+                'ects' => $catalog->ects_credit,
+            ];
+        }
+        return null;
+    }
+
 }

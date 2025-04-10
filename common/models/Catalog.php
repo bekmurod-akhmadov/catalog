@@ -37,7 +37,8 @@ use yii\helpers\ArrayHelper;
  */
 class Catalog extends \yii\db\ActiveRecord
 {
-
+    const STATUS_ACTIVE = 1;
+    const STATUS_INACTIVE = 0;
 
     /**
      * {@inheritdoc}
@@ -53,15 +54,42 @@ class Catalog extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['description', 'course_code', 'prerequisite', 'lecture_hours', 'tutorials_hours', 'lab_hours', 'semester', 'ects_credit', 'us_credit', 'degree', 'syllabus_template', 'term', 'part_of_team', 'format', 'section_status', 'maximum_enrollment', 'seats_avail', 'waitlist_total', 'last_day_to_register', 'instructor', 'meeting_info', 'notes'], 'default', 'value' => null],
-            [['subject_board', 'course_name', 'department'], 'required'],
-            [['subject_board', 'lecture_hours', 'tutorials_hours', 'lab_hours', 'ects_credit', 'us_credit', 'degree', 'maximum_enrollment', 'seats_avail', 'instructor'], 'integer'],
+            [['status', 'description', 'course_code', 'prerequisite', 'lecture_hours', 'tutorials_hours', 'lab_hours', 'semester', 'ects_credit', 'us_credit', 'syllabus_template', 'term', 'part_of_team', 'format', 'section_status', 'maximum_enrollment', 'seats_avail', 'waitlist_total', 'last_day_to_register', 'instructor', 'meeting_info', 'notes', 'subject_board_id'], 'default', 'value' => null],
+            [['subject_board', 'course_name', 'department' , 'course_type' , 'program' , 'year' , 'degree'], 'required'],
+            [['subject_board', 'status','year', 'course_type' ,'lecture_hours', 'tutorials_hours', 'lab_hours', 'ects_credit', 'us_credit', 'degree', 'maximum_enrollment', 'seats_avail', 'instructor'], 'integer'],
             [['description'], 'string'],
             [['last_day_to_register' , 'last_date_to_add_or_drop'], 'safe'],
             [['course_name', 'department', 'course_code', 'prerequisite', 'semester', 'syllabus_template', 'term', 'part_of_team', 'format', 'section_status', 'waitlist_total', 'meeting_info', 'notes'], 'string', 'max' => 255],
+            ['program', 'safe'],
+            ['program', 'validateJson']
         ];
     }
 
+    public function validateJson($attribute, $params)
+    {
+        if (is_array($this->$attribute)) {
+            return;
+        }
+
+        json_decode($this->$attribute);
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            $this->addError($attribute, 'Program ID must be a valid JSON string.');
+        }
+    }
+
+    public function beforeSave($insert)
+    {
+        if (is_array($this->program)) {
+            $this->program = json_encode($this->program);
+        }
+        return parent::beforeSave($insert);
+    }
+
+    public function afterFind()
+    {
+        $this->program = json_decode($this->program, true);
+        parent::afterFind();
+    }
     /**
      * {@inheritdoc}
      */
@@ -95,6 +123,7 @@ class Catalog extends \yii\db\ActiveRecord
             'instructor' => 'Instructor',
             'meeting_info' => 'Meeting Info',
             'notes' => 'Notes',
+            'program' => "Program",
         ];
     }
 
@@ -144,6 +173,39 @@ class Catalog extends \yii\db\ActiveRecord
             '2' => 'Spring 2026',
         ];
     }
+    public static function getCourseTypeList()
+    {
+        return ArrayHelper::map(CourseType::find()->all(), 'id', 'name');
+    }
 
+    public static function getPrograms()
+    {
+        return ArrayHelper::map(Program::find()->all() , 'id' , 'name');
+    }
+
+    public static function getYears()
+    {
+        return ArrayHelper::map(Year::find()->all() , 'id' , 'year');
+    }
+
+    public static function getStatusList()
+    {
+        return [
+            self::STATUS_ACTIVE => 'Active',
+            self::STATUS_INACTIVE => 'Inactive',
+        ];
+    }
+
+    public static function getListByProgramId(int $id)
+    {
+        if ($id <= 0) {
+            return null;
+        }
+
+        // Assuming the 'program' column is of type JSON or JSONB
+        return self::find()
+            ->where(['like', 'program', '"'.$id.'"'])
+            ->all();
+    }
 
 }

@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="program-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h3><?= Html::encode($this->title) ?></h3>
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
@@ -27,29 +27,33 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
     </p>
 
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id',
-            'name',
-            'ep_code',
+    <div class="card">
+        <div class="card-body">
+            <?= DetailView::widget([
+                'model' => $model,
+                'attributes' => [
+                    'id',
+                    'name',
+                    'ep_code',
 
-            [
-                'attribute' => 'application_type',
-                'value' => function ($model){
-                  if (!empty($model->application_type))
-                      return Program::getApplicationTypeLabel($model->application_type);
-                }
-            ],
-            [
-                'attribute' => 'school_type',
-                'value' => function ($model){
-                    if (!empty($model->school_type))
-                        return Program::getSchoolsList()[$model->school_type];
-                }
-            ],
-            'description:ntext',
-        ],
-    ]) ?>
+                    [
+                        'attribute' => 'application_type',
+                        'value' => function ($model){
+                            if (!empty($model->application_type))
+                                return Program::getApplicationTypeLabel($model->application_type);
+                        }
+                    ],
+                    [
+                        'attribute' => 'school_type',
+                        'value' => function ($model){
+                            if (!empty($model->school_type))
+                                return Program::getSchoolsList()[$model->school_type];
+                        }
+                    ],
+                    'description:ntext',
+                ],
+            ]) ?>
+        </div>
+    </div>
 
 </div>

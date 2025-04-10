@@ -13,6 +13,7 @@ return [
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'request' => [
+            'baseUrl' => '',
             'csrfParam' => '_csrf-frontend',
         ],
         'user' => [
@@ -40,6 +41,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                '' => 'site/index',
                 'about' => 'site/about',
                 'services' => 'site/services',
                 'calendars' => 'site/calendars',
@@ -64,6 +66,7 @@ return [
                 'contact' => 'site/contact',
                 'handbooks' => 'site/handbooks',
                 'faq' => 'site/faq',
+
             ],
         ],
     ],

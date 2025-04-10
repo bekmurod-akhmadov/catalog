@@ -3,15 +3,12 @@
     <div class="sidebar-brand">
         <!--begin::Brand Link-->
         <a href="<?=\yii\helpers\Url::home()?>" class="brand-link">
-            <!--begin::Brand Image-->
             <img
-                src="/img/AdminLTELogo.png"
-                alt="AdminLTE Logo"
+                src="/images/newuu/newuu-logo.png"
+                alt="Logo"
                 class="brand-image opacity-75 shadow"
             />
-            <!--end::Brand Image-->
-            <!--begin::Brand Text-->
-            <span class="brand-text fw-light">AdminLTE 4</span>
+            <span class="brand-text fw-light"></span>
             <!--end::Brand Text-->
         </a>
         <!--end::Brand Link-->
@@ -27,35 +24,35 @@
                 role="menu"
                 data-accordion="false"
             >
-                <li class="nav-item menu-open">
-                    <a href="#" class="nav-link active">
+                <li class="nav-item <?=in_array(Yii::$app->controller->id , ['program' , 'course' , 'year', 'semester'] ) ? 'menu-open' : '' ?>">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon bi bi-speedometer"></i>
                         <p>
                             Curriculum
                             <i class="nav-arrow bi bi-chevron-right"></i>
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
+                    <ul class="nav nav-treeview" style="display:<?=in_array(Yii::$app->controller->id , ['program' , 'course' , 'year', 'semester'] ) ? 'block' : 'none' ?>">
                         <li class="nav-item">
-                            <a href="<?=\yii\helpers\Url::to(['/program/index'])?>" class="nav-link">
+                            <a href="<?=\yii\helpers\Url::to(['/program/index'])?>" class="nav-link <?=Yii::$app->controller->id == 'program' ? 'active' : ''?>">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>Programs</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?=\yii\helpers\Url::to(['/course/index'])?>" class="nav-link">
+                            <a href="<?=\yii\helpers\Url::to(['/course/index'])?>" class="nav-link <?=Yii::$app->controller->id == 'course' ? 'active' : ''?>">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>Courses</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?=\yii\helpers\Url::to(['/year/index'])?>" class="nav-link">
+                            <a href="<?=\yii\helpers\Url::to(['/year/index'])?>" class="nav-link <?=Yii::$app->controller->id == 'year' ? 'active' : ''?>">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>Years</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?=\yii\helpers\Url::to(['/semester/index'])?>" class="nav-link">
+                            <a href="<?=\yii\helpers\Url::to(['/semester/index'])?>" class="nav-link <?=Yii::$app->controller->id == 'semester' ? 'active' : ''?>">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>Semesters</p>
                             </a>
@@ -63,7 +60,7 @@
 
                     </ul>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item <?=in_array(Yii::$app->controller->id , ['department' , 'catalog' , 'instructor'] ) ? 'menu-open' : '' ?>">
                     <a href="#" class="nav-link">
                         <i class="nav-icon bi bi-box-seam-fill"></i>
                         <p>
@@ -71,7 +68,7 @@
                             <i class="nav-arrow bi bi-chevron-right"></i>
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
+                    <ul class="nav nav-treeview" style="display: <?=in_array(Yii::$app->controller->id , ['department' , 'catalog' , 'instructor'] ) ? 'block' : 'none' ?>">
                         <li class="nav-item">
                             <a href="<?=\yii\helpers\Url::to(['/catalog/index'])?>" class="nav-link <?=Yii::$app->controller->id == 'catalog' ? 'active' : ''?>">
                                 <i class="nav-icon bi bi-circle"></i>
@@ -99,8 +96,6 @@
                     </a>
                 </li>
             </ul>
-            <!--end::Sidebar Menu-->
-        </nav>
+            </nav>
     </div>
-    <!--end::Sidebar Wrapper-->
 </aside>

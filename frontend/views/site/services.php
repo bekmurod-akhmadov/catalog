@@ -389,7 +389,7 @@ $this->title = "Services";
                                                 - making resit exam schedule for students and proctors;<br>
                                                 - monitoring the timely submisssion of the grades from faculty;<br>
                                                 - updating the results on a database after resit exam</p>
-                                            <a href="catalog.html" class="btn btn-very-small bg-base-color text-white hover-base rounded mt-3">Open <i class="fa-solid fa-arrow-right fs-12"></i></a>
+                                            <a href="<?=\yii\helpers\Url::to(['/site/catalog'])?>" class="btn btn-very-small bg-base-color text-white hover-base rounded mt-3">Open <i class="fa-solid fa-arrow-right fs-12"></i></a>
                                         </div>
                                     </div>
                                 </div>

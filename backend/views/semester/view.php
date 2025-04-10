@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="semester-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h3><?= Html::encode($this->title) ?></h3>
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
@@ -26,28 +26,16 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
     </p>
 
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id',
-            [
-                'attribute' => 'year_id',
-                'value' => function ($model) {
-                    if (!empty($model->year_id) && !empty($model->year)) {
-                        return $model->year->year;
-                    }
-                }
-            ],
-            'semester',
-            [
-                'attribute' => 'semester',
-                'value' => function ($model) {
-                    if (!empty($model->program_id) && !empty($model->program)) {
-                        return $model->program->name;
-                    }
-                }
-            ],
-        ],
-    ]) ?>
+    <div class="card">
+        <div class="card-body">
+            <?= DetailView::widget([
+                'model' => $model,
+                'attributes' => [
+                    'id',
+                    'semester',
+                ],
+            ]) ?>
+        </div>
+    </div>
 
 </div>

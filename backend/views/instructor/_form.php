@@ -12,16 +12,20 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'last_name')->textInput(['maxlength' => true]) ?>
+    <div class="card">
+        <div class="card-body">
+            <?= $form->field($model, 'last_name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'first_name')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'first_name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'academic_degree')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'academic_degree')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
+            <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
-    <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+            <div class="form-group">
+                <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+            </div>
+        </div>
     </div>
 
     <?php ActiveForm::end(); ?>
