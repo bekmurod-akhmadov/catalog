@@ -66,7 +66,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'urlCreator' => function ($action, Program $model, $key, $index, $column) {
                             return Url::toRoute([$action, 'id' => $model->id]);
                         },
-                        'template' => '{view} {update} {delete}',
+                        'template' => '<div class="d-flex">{view} {update} {delete}</div>',
                         'buttons' => [
                             'view' => function ($url, $model, $key) {
                                 return Html::a('<i class="fa fa-eye"></i>', $url, [

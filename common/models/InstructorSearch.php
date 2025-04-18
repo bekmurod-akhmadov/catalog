@@ -17,7 +17,7 @@ class InstructorSearch extends Instructor
     public function rules()
     {
         return [
-            [['id'], 'integer'],
+            [['id', 'department', 'school', 'administrative_position', 'academic_position', 'status'], 'integer'],
             [['last_name', 'first_name', 'academic_degree', 'description'], 'safe'],
         ];
     }
@@ -60,6 +60,11 @@ class InstructorSearch extends Instructor
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            'department' => $this->department,
+            'school' => $this->school,
+            'administrative_position' => $this->administrative_position,
+            'academic_position' => $this->academic_position,
+            'status' => $this->status,
         ]);
 
         $query->andFilterWhere(['like', 'last_name', $this->last_name])

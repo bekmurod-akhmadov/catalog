@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
 
     <div class="card">
         <div class="card-body">
-            <?= $form->field($model, 'year')->textInput(['maxlength' => true]) ?>
+           <?= $form->field($model, 'year')->textInput(['maxlength' => true]) ?>
 
             <div class="form-group mt-2">
                 <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

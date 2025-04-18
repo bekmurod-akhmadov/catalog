@@ -18,11 +18,21 @@ use yii\widgets\ActiveForm;
 
             <?= $form->field($model, 'first_name')->textInput(['maxlength' => true]) ?>
 
-            <?= $form->field($model, 'academic_degree')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'academic_degree')->dropDownList($model::getAcademicDegreeList(),['prompt' => 'Select...']) ?>
 
             <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
-            <div class="form-group">
+            <?= $form->field($model, 'department')->dropDownList($model->getDepartments() , ['prompt' => 'Select...']) ?>
+
+            <?= $form->field($model, 'school')->dropDownList($model::getSchoolList() , ['prompt' => 'Select...']) ?>
+
+            <?= $form->field($model, 'administrative_position')->dropDownList($model::getAdminstrativeList() , ['prompt' => 'Select...']) ?>
+
+            <?= $form->field($model, 'academic_position')->dropDownList($model::getAcademicPositionList() , ['prompt' => 'Select...']) ?>
+
+            <?= $form->field($model, 'status')->dropDownList($model::getStatusList() , ['prompt' => 'Select...']) ?>
+
+            <div class="form-group mt-3">
                 <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
             </div>
         </div>

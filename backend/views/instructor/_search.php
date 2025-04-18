@@ -25,6 +25,16 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'description') ?>
 
+    <?php // echo $form->field($model, 'department') ?>
+
+    <?php // echo $form->field($model, 'school') ?>
+
+    <?php // echo $form->field($model, 'administrative_position') ?>
+
+    <?php // echo $form->field($model, 'academic_position') ?>
+
+    <?php // echo $form->field($model, 'status') ?>
+
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
         <?= Html::resetButton('Reset', ['class' => 'btn btn-outline-secondary']) ?>

@@ -16,7 +16,7 @@ use yii\widgets\ActiveForm;
         <div class="card-body">
             <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
-            <div class="form-group">
+            <div class="form-group mt-2">
                 <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
             </div>
         </div>

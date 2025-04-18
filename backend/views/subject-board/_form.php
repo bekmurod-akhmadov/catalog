@@ -14,9 +14,12 @@ use yii\widgets\ActiveForm;
 
     <div class="card">
         <div class="card-body">
-            <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
-            <?= $form->field($model, 'graduate')->dropDownList($model::getGraduates() , ['prompt' => 'Select...']) ?>
-
+            <div class="col-lg-12 py-2">
+                <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+            </div>
+            <div class="col-lg-12 py-2">
+                <?= $form->field($model, 'graduate')->dropDownList($model::getGraduates(), ['prompt' => 'Select...']) ?>
+            </div>
             <div class="form-group">
                 <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
             </div>

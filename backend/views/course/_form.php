@@ -16,69 +16,78 @@ use yii\widgets\ActiveForm;
 
     <div class="card">
         <div class="card-body">
-            <?=
-            $form->field($model, 'course_code')->widget(Select2::classname(), [
-                'data' => $model::getCatalogList(),
-                'options' => [
-                    'id' => 'course_course_code',
-                    'placeholder' => 'Select a state ...'
-                ],
-                'pluginOptions' => [
-                    'allowClear' => true
-                ],
-            ]);
-            ?>
+            <div class="col-lg-12 py-2">
+                <?= $form->field($model, 'course_code')->widget(Select2::classname(), [
+                    'data' => $model::getCatalogList(),
+                    'options' => [
+                        'id' => 'course_course_code',
+                        'placeholder' => 'Select a state ...'
+                    ],
+                    'pluginOptions' => [
+                        'allowClear' => true
+                    ],
+                ]);
+                ?>
+            </div>
+            <div class="col-lg-12 py-2">
+                <?= $form->field($model, 'course_name')->textInput(['maxlength' => true]) ?>
+            </div>
+            <div class="col-lg-12 py-2">
+                <?= $form->field($model, 'subjectboard_id')->dropDownList($model::getSubjectList() , ['prompt' => 'Select subject board...']) ?>
+            </div>
+            <div class="col-lg-12 py-2">
+                <?= $form->field($model, 'course_type')->dropDownList($model::getCourseTypeList() , ['prompt' => 'Select...']) ?>
+            </div>
+            <div class="col-lg-12 py-2">
+                <?= $form->field($model, 'prerequisite')->textInput(['maxlength' => true]) ?>
+            </div>
+            <div class="col-lg-12 py-2">
+                <?= $form->field($model, 'lecture')->textInput() ?>
+            </div>
+            <div class="col-lg-12 py-2">
+                <?= $form->field($model, 'tutorial_and_lab')->textInput() ?>
+            </div>
+            <div class="col-lg-12 py-2">
+                <?= $form->field($model, 'ects')->textInput() ?>
+            </div>
+            <div class="col-lg-12 py-2">
+                <?php
+                echo $form->field($model, 'program_id')->widget(Select2::classname(), [
+                    'data' => $model::getPrograms(),
+                    'size' => Select2::SMALL,
+                    'options' => ['placeholder' => 'Select a color ...', 'multiple' => true],
+                    'value' => function($model) {
+                        $ids = is_string($model->program_id) ? json_decode($model->program_id, true) : (array) $model->program_id;
+                        if (!is_array($ids) || empty($ids)) {
+                            return [];
+                        }
 
-            <?= $form->field($model, 'course_name')->textInput(['maxlength' => true]) ?>
+                        $titles = Program::find()
+                            ->select(['id', 'title'])
+                            ->where(['id' => $ids])
+                            ->indexBy('id')
+                            ->column();
 
-            <?= $form->field($model, 'subjectboard_id')->dropDownList($model::getSubjectList() , ['prompt' => 'Select subject board...']) ?>
+                        return $titles;
+                    },
+                    'pluginOptions' => [
+                        'tags' => true,
+                        'tokenSeparators' => [',', ' '],
+                        'maximumInputLength' => 10
+                    ],
+                ])->label('Program');
+                ?>
+            </div>
+            <div class="col-lg-12 py-2">
+                <?= $form->field($model, 'year_id')->dropDownList($model::getYears() , ['prompt' => 'Select...']) ?>
 
-            <?= $form->field($model, 'course_type')->dropDownList($model::getCourseTypeList() , ['prompt' => 'Select...']) ?>
-
-            <?= $form->field($model, 'prerequisite')->textInput(['maxlength' => true]) ?>
-
-            <?= $form->field($model, 'lecture')->textInput() ?>
-
-            <?= $form->field($model, 'tutorial_and_lab')->textInput() ?>
-
-            <?= $form->field($model, 'ects')->textInput() ?>
-
-            <?php
-            echo $form->field($model, 'program_id')->widget(Select2::classname(), [
-                'data' => $model::getPrograms(),
-                'size' => Select2::SMALL,
-                'options' => ['placeholder' => 'Select a color ...', 'multiple' => true],
-                'value' => function($model) {
-                    $ids = is_string($model->program_id) ? json_decode($model->program_id, true) : (array) $model->program_id;
-                    if (!is_array($ids) || empty($ids)) {
-                        return [];
-                    }
-
-                    $titles = Program::find()
-                        ->select(['id', 'title'])
-                        ->where(['id' => $ids])
-                        ->indexBy('id')
-                        ->column();
-
-                    return $titles;
-                },
-                'pluginOptions' => [
-                    'tags' => true,
-                    'tokenSeparators' => [',', ' '],
-                    'maximumInputLength' => 10
-                ],
-            ])->label('Program');
-            ?>
-            <!--    --><?php //= $form->field($model, 'program_id')->dropDownList($model::getPrograms() , ['prompt' => 'Select...']) ?>
-
-            <?= $form->field($model, 'year_id')->dropDownList($model::getYears() , ['prompt' => 'Select...']) ?>
-
-            <?= $form->field($model, 'semester_id')->dropDownList($model::getSemesterList() , ['prompt' => 'Select...']) ?>
-
-            <?= $form->field($model, 'status')->dropDownList($model::getStatusList()) ?>
-
-
-
+            </div>
+            <div class="col-lg-12 py-2">
+                <?= $form->field($model, 'semester_id')->dropDownList($model::getSemesterList() , ['prompt' => 'Select...']) ?>
+            </div>
+            <div class="col-lg-12 py-2">
+                <?= $form->field($model, 'status')->dropDownList($model::getStatusList()) ?>
+            </div>
             <div class="form-group mt-2">
                 <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
             </div>
@@ -97,7 +106,7 @@ $(document).ready(function(){
         var catalog_id = $(this).val();
         if(catalog_id) {
             $.ajax({
-                url: '/course/get-catalog',
+                url: '/admin/course/get-catalog',
                 type: 'GET',
                 dataType: 'json',
                 data: { catalog_id: catalog_id },

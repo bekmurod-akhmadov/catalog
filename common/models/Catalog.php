@@ -114,7 +114,7 @@ class Catalog extends \yii\db\ActiveRecord
             'term' => 'Term',
             'part_of_team' => 'Part Of Team',
             'format' => 'Format',
-            'section_status' => 'Section Status',
+            'section_status' => 'Grade Status',
             'maximum_enrollment' => 'Maximum Enrollment',
             'seats_avail' => 'Seats Avail',
             'waitlist_total' => 'Waitlist Total',
