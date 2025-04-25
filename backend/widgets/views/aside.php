@@ -24,7 +24,7 @@
                 role="menu"
                 data-accordion="false"
             >
-                <li class="nav-item <?=in_array(Yii::$app->controller->id , ['program' , 'course' , 'year', 'semester'] ) ? 'menu-open' : '' ?>">
+                <li class="nav-item <?=in_array(Yii::$app->controller->id , ['program' , 'course' , 'year', 'semester' , 'course-type'] ) ? 'menu-open' : '' ?>">
                     <a href="#" class="nav-link">
                         <i class="nav-icon bi bi-speedometer"></i>
                         <p>
@@ -43,6 +43,12 @@
                             <a href="<?=\yii\helpers\Url::to(['/course/index'])?>" class="nav-link <?=Yii::$app->controller->id == 'course' ? 'active' : ''?>">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>Courses</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?=\yii\helpers\Url::to(['/course-type/index'])?>" class="nav-link <?=Yii::$app->controller->id == 'course-type' ? 'active' : ''?>">
+                                <i class="nav-icon bi bi-circle"></i>
+                                <p>Courses Type</p>
                             </a>
                         </li>
                         <li class="nav-item">

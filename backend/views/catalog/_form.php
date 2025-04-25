@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 
 /** @var yii\web\View $this */
 /** @var common\models\Catalog $model */
-/** @var yii\widgets\ActiveForm $form */
+/** @var yii\bootstrap5\ActiveForm $form */
 ?>
 
 <div class="catalog-form">
@@ -40,6 +40,7 @@ use yii\widgets\ActiveForm;
                         <?= $form->field($model, 'course_type')->dropDownList($model::getCourseTypeList(), ['prompt' => 'Select...']) ?>
                     </div>
 
+
                     <div class="col-lg-12 py-2">
                         <?= $form->field($model, 'prerequisite')->textInput(['maxlength' => true]) ?>
                     </div>
@@ -59,7 +60,9 @@ use yii\widgets\ActiveForm;
                     <div class="col-lg-12 py-2">
                         <?= $form->field($model, 'semester')->textInput(['maxlength' => true]) ?>
                     </div>
-
+                    <div class="col-lg-12 py-2">
+                        <?= $form->field($model, 'year')->dropDownList($model::getYears() , ['prompt' => 'Select...']) ?>
+                    </div>
                     <div class="col-lg-12 py-2">
                         <?= $form->field($model, 'ects_credit')->textInput() ?>
                     </div>
