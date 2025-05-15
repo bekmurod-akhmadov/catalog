@@ -28,8 +28,6 @@ RUN apt-get update \
        bcmath \
        intl \
        gd \
-  && pecl install redis \
-  && docker-php-ext-enable redis \
   && rm -rf /var/lib/apt/lists/*
 
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer

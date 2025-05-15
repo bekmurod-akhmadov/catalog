@@ -27,7 +27,6 @@ services:
       - 'host.docker.internal:host-gateway'
     depends_on:
       - pgsql
-      - redis
     restart: unless-stopped
 
   nginx:
@@ -60,18 +59,6 @@ services:
       - devituz
     restart: unless-stopped
 
-  redis:
-    image: redis:alpine
-    container_name: ${DOCKER_CONTAINER_NAME}_redis
-    ports:
-      - '${FORWARD_REDIS_PORT:-6382}:6379'
-    volumes:
-      - ./redis.conf:/usr/local/etc/redis/redis.conf
-      - redis-data:/data
-    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
-    networks:
-      - devituz
-    restart: unless-stopped
 
   migration:
     build:
@@ -84,7 +71,6 @@ services:
     depends_on:
       - app
       - pgsql
-      - redis
     networks:
       - devituz
     environment:
@@ -100,7 +86,6 @@ services:
 
 volumes:
   pgsql-data:
-  redis-data:
 
 networks:
   devituz:
