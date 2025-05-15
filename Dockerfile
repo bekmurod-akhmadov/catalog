@@ -1,4 +1,4 @@
-FROM php:8.3.20-fpm AS builder
+FROM php:8.1-fpm AS builder
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
@@ -32,7 +32,7 @@ RUN apt-get update \
 
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
-FROM php:8.3.20-fpm
+FROM php:8.1-fpm
 
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
@@ -51,10 +51,12 @@ WORKDIR /var/www/html
 
 COPY . .
 
-RUN mkdir -p runtime web/assets \
+RUN composer install --no-interaction --prefer-dist \
+ && echo "0" | php init --env=Development --overwrite=All \
+ && mkdir -p runtime web/assets \
  && chown -R www-data:www-data runtime web/assets \
- && chmod -R 775 runtime web/assets
-
+ && chmod -R 777 /var/www/html
+ 
 
 EXPOSE 9000
 CMD ["php-fpm"]
