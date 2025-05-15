@@ -198,7 +198,7 @@ $this->title = "About";
                         <span>The Office of Academic Adminstration is responsible for the administration of all academic programs at New Uzbekistan University.</span>
                         <p class="fs-26 fw-semibold text-dark ps-0 pt-4">ACADEMIC ADVISING</p>
                         <span>The Office of Academic Advising provides students with individual guidance, connection to resources, and support in developing relationships.</span>
-                        <a href="about-advising.html" class="link-success">Meet <i class="fa-solid fa-arrow-right fs-12"></i></a>
+                        <a href="<?=\yii\helpers\Url::toRoute('/calendars')?>" class="link-success">Meet <i class="fa-solid fa-arrow-right fs-12"></i></a>
 
 
                         <!--                        <a href="#" class="link-success">Meet <i class="fa-solid fa-arrow-right fs-12"></i></a>-->
@@ -254,7 +254,7 @@ $this->title = "About";
                     </div>
                     <div class="col text-center text-sm-start" style="">
                         <span class="alt-font fs-30 fw-700 d-block w-90 text-dark-gray border-bottom border-2 border-color-dark-gray pb-15px mb-15px xs-w-100"><i class="fa-brands fa-telegram d-inline-block icon-medium me-10px"></i>Telegram</span>
-                        <a href="https://t.me/@nuuacademicofficebot">@nuuacademicofficebot</a><br>
+                        <a href="https://t.me/nuuacademicofficebot">@nuuacademicofficebot</a><br>
                     </div>
                 </div>
             </div>

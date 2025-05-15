@@ -27,7 +27,7 @@ $this->title = "Transcripts, certifications & letters";
                 <div class="row">
                     <div class="col-md-6">
                         <p>Students can check and print their <b>unofficial transcript</b> through <b>HeRo</b> in the "Transcript" section.</p>
-                        <p>For <b>official copies</b>, students must first fill out the <a class="text-base-color-2" href="#">Transcript Request Form</a>. The hard copy will be issued within <b>two working days</b> and can be collected at the <b>Registrar’s Office (UCA 103)</b>.</p>
+                        <p>For <b>official copies</b>, students must first fill out the <a target="_blank" class="text-base-color-2" href="https://docs.google.com/forms/d/e/1FAIpQLSd4f0sgHD23vZQjeKx_dMx5H6oa6dsUpAkPCtQMj6FD1B1_zw/viewform">Transcript Request Form</a>. The hard copy will be issued within <b>two working days</b> and can be collected at the <b>Registrar’s Office (UCA 103)</b>.</p>
                         <p class="text-dark fw-semibold">Official transcripts will contain the following information:</p>
                         <ul class="list-style-04 ps-5">
                             <li>Student’s identification data (full name, father's name, place and date of birth);</li>

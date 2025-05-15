@@ -4,10 +4,10 @@
         <div class="container-fluid bg-base-color top-menu-1">
             <div class="row px-3 py-1 w-100">
                 <div class="d-flex justify-content-end gap-4 align-items-center">
-                    <a href="statistics-and-reports.html" class="text-turquoise">Statistics & Reports</a>
+                    <a href="<?=\yii\helpers\Url::toRoute('/site/statistics')?>" class="text-turquoise">Statistics & Reports</a>
                     <a href="<?=\yii\helpers\Url::to(['/site/forms'])?>" class="text-turquoise">Forms</a>
                     <a href="<?=\yii\helpers\Url::to(['/site/contact'])?>" class="text-turquoise">Contact</a>
-                    <a href="handbooks.html" class="text-turquoise">Handbooks</a>
+<!--                    <a href="handbooks.html" class="text-turquoise">Handbooks</a>-->
                     <a href="<?=\yii\helpers\Url::to(['/site/faq'])?>" class="text-turquoise">FAQ</a>
                 </div>
             </div>

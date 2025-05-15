@@ -60,6 +60,7 @@ class CatalogController extends Controller
         ]);
     }
 
+
     /**
      * Displays a single Catalog model.
      * @param int $id ID

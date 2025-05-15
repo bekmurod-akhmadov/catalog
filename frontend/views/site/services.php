@@ -28,7 +28,7 @@ $this->title = "Services";
                     <p>At New Uzbekistan University, we are committed to supporting our students, staff, and faculty with a wide range of services designed to enhance academic success, professional growth, and overall well-being. From academic advising and career development to administrative support and campus resources, we ensure that everyone in our community has the tools they need to thrive. Below is a list of services our department offers to assist you. If you were unable to find the service you need, please contact us directly at
                         <a class="text-base-color-2" href="mailto:registrar@newuu.uz">registrar@newuu.uz</a>.</p>
                     <h5 class="fw-700 text-dark-gray w-95 xl-w-100 ls-minus-1px" style="">Services for students, staff, and faculty</h5>
-                    <p class="text-dark text-justify" style="">Will I need a student ID for these?</p>
+                    <p class="text-dark text-justify" style="">At New Uzbekistan University will I need a student ID for these?</p>
                     <p class="text-dark text-justify" style="">Yes. Our services may ask for confidential information, so you'll need student ID / university account to use them.</p>
                     <p class="text-dark text-justify" style="">Visit (link for the system)  to learn more.</p>
                 </div>
@@ -370,7 +370,6 @@ $this->title = "Services";
                                                 - invigilating via CCTV cameras to observe exam process and catch the misconduct cases if happen;
                                                 <br>
                                                 - collecting the exam papers after checking and paper review: transfer to archive</p>
-                                            <a href="#" class="btn btn-very-small bg-base-color text-white hover-base rounded mt-3">Open <i class="fa-solid fa-arrow-right fs-12"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -472,7 +471,7 @@ $this->title = "Services";
                                     <div id="accordion-style-02-31" class="accordion-collapse collapse" data-bs-parent="#accordion-style-03">
                                         <div class="accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray">
                                             <p>- collecting course descriptions for each course provided at NUU;
-                                                - <a class="text-base-color-2" href="https://bright-gnome-d65f9f.netlify.app/catalog">Open Link</a></p>
+                                                - <a class="text-base-color-2" href="<?=\yii\helpers\Url::toRoute('/catalog')?>">Open Link</a></p>
                                         </div>
                                     </div>
                                 </div>

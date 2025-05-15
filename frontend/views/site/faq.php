@@ -1,4 +1,8 @@
-<section class="page-title-big-typography bg-dark-gray ipad-top-space-margin cover-background" data-parallax-background-ratio="0.5" style="background-repeat: no-repeat;background-image: url(images/newuu/breadcrump2.jpg);">
+<?php
+$this->title = "FAQ";
+?>
+<!-- start page title -->
+<section class="page-title-big-typography bg-dark-gray ipad-top-space-margin cover-background" data-parallax-background-ratio="0.5" style="background-repeat: no-repeat;background-image: url(/images/newuu/breadcrump2.jpg);">
     <div class="opacity-very-light bg-dark-slate-blue"></div>
     <div class="container">
         <div class="row align-items-center justify-content-center extra-small-screen">
@@ -97,7 +101,7 @@
                                             </div>
                                             <div id="accordion-style-01-01" class="accordion-collapse collapse show" data-bs-parent="#accordion-style-01">
                                                 <div class="accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray">
-                                                    <p>Fill in the form: <a class="text-base-color-2" href="https://docs.google.com/forms/d/e/1FAIpQLSd4f0sgHD23vZQjeKx_dMx5H6oa6dsUpAkPC">Open link <i class="fa-solid fa-square-up-right"></i></a></p>
+                                                    <p>Fill in the form: <a class="text-base-color-2" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd4f0sgHD23vZQjeKx_dMx5H6oa6dsUpAkPC">Open link <i class="fa-solid fa-square-up-right"></i></a></p>
                                                     <div class="row my-4">
                                                         <div class="col-md-4 text-dark">Responsible Department:</div>
                                                         <div class="col-md-8">Academic Affairs</div>
@@ -483,7 +487,7 @@
                                             <div class="accordion-header border-bottom border-color-light-medium-gray">
                                                 <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-01-17" aria-expanded="false" data-bs-parent="#accordion-style-01">
                                                     <div class="accordion-title mb-0 position-relative text-dark-gray">
-                                                        <i class="feather icon-feather-plus"></i><span class="fw-500 fs-17">17. I lost my student ID card</span>
+                                                        <i class="feather icon-feather-plus"></i><span class="fw-500 fs-17">I lost my student ID card. What should I do?</span>
                                                     </div>
                                                 </a>
                                             </div>
@@ -507,7 +511,7 @@
                                             <div class="accordion-header border-bottom border-color-light-medium-gray">
                                                 <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-01-18" aria-expanded="false" data-bs-parent="#accordion-style-01">
                                                     <div class="accordion-title mb-0 position-relative text-dark-gray">
-                                                        <i class="feather icon-feather-plus"></i><span class="fw-500 fs-17">18. How can I change my program of study?d</span>
+                                                        <i class="feather icon-feather-plus"></i><span class="fw-500 fs-17">18. How can I change my program of study?</span>
                                                     </div>
                                                 </a>
                                             </div>
@@ -566,7 +570,7 @@
                                             <div id="accordion-style-02-01" class="accordion-collapse collapse show" data-bs-parent="#accordion-style-02">
                                                 <div class="accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray">
                                                     <p>Please, visit the university website. The link is provided.</p>
-                                                    <a class="text-base-color-2" href="https://newuu.uz/student/academic-calendar">Open link <i class="fa-solid fa-square-up-right"></i></a>
+                                                    <a class="text-base-color-2" href="<?=\yii\helpers\Url::toRoute('/calendars')?>">Open link <i class="fa-solid fa-square-up-right"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -583,7 +587,7 @@
                                             <div id="accordion-style-02-02" class="accordion-collapse collapse" data-bs-parent="#accordion-style-02">
                                                 <div class="accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray">
                                                     <p>See the academic calendar for students on NEWUU website. Go to "Students" menu, choose "Academic Calendar" section.</p>
-                                                    <a class="text-base-color-2" href="https://newuu.uz/student/academic-calendar">Open link <i class="fa-solid fa-square-up-right"></i></a>
+                                                    <a class="text-base-color-2" href="<?=\yii\helpers\Url::toRoute('/calendars')?>">Open link <i class="fa-solid fa-square-up-right"></i></a>
                                                 </div>
                                             </div>
                                         </div>

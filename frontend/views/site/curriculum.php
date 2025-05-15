@@ -97,7 +97,7 @@ $this->title = 'Curriculum';
                                                     <?php if (!empty($courses)): ?>
                                                         <?php foreach ($courses as $cours): ?>
                                                             <?php
-                                                            $subjects = json_decode($cours['courses'] , true);
+                                                                $subjects = json_decode($cours['courses'] , true);
                                                             ?>
                                                             <span class="text-dark-gray fw-700 mb-15px fs-28 ls-minus-05px d-inline-block"><?=$program->name?></span>
                                                             <div class="responsive-table">
@@ -114,8 +114,10 @@ $this->title = 'Curriculum';
                                                                     </tr>
                                                                     </thead>
                                                                     <tbody>
-                                                                    <?php if (!empty($subjects)): ?>
+                                                                        <?php if (!empty($subjects)): ?>
                                                                         <?php foreach ($subjects as $subject): ?>
+<!--                                                                        --><?php //echo '<pre>';
+//                                                                        print_r($subject)?>
                                                                             <tr>
                                                                                 <td><?=Program::getSemesterName($subject['semester_id'])?></td>
                                                                                 <td><?=$subject['course_name']?></td>

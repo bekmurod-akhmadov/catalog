@@ -28,8 +28,8 @@ $this->title = "Forms";
                     <p>1. Withdrawal from Studies Form <a class="text-base-color-2" href="https://docs.google.com/document/d/1AxtLpeHq7SlMUoCbLRl3OT2f8bTwWwY4/edit?usp=sharing&ouid=107611085839239993507&rtpof=true&sd=true">form link <i class="fa-solid fa-square-up-right"></i></a></p>
                     <p>2. Readmission Approval Form <a class="text-base-color-2" href="https://docs.google.com/document/d/16vsC6hIxPpW5yKVXMuAYZZ8b1kFCBDlN/edit?usp=sharing&ouid=107611085839239993507&rtpof=true&sd=true">form link <i class="fa-solid fa-square-up-right"></i></a></p>
                     <p>3. External Transfer of credits approval Form <a class="text-base-color-2" href="https://docs.google.com/document/d/1z2hgMBDgrlBgWH2BSU8HOsrEIYWQxWWR/edit?usp=sharing&ouid=107611085839239993507&rtpof=true&sd=true">form link <i class="fa-solid fa-square-up-right"></i></a></p>
-                    <p>4. Program Change Approval Form <a class="text-base-color-2" href="https://docs.google.com/document/d/1-uclih7-Va5Vt6sORBR25307sdbw2J8z/edit?usp=sharing&ouid=107611085839239993507&rtpof=true&sd=true">form link <i class="fa-solid fa-square-up-right"></i></a></p>
-                    <p>5. Online certificate and transcript Form <a class="text-base-color-2" href="https://forms.gle/fo9obEV3AvUeUuTe8"form link <i class="fa-solid fa-square-up-right"></i></a></p>
+                    <p>4. Program Change Approval Form <a class="text-base-color-2" href="https://docs.google.com/forms/d/e/1FAIpQLSd4f0sgHD23vZQjeKx_dMx5H6oa6dsUpAkPCtQMj6FD1B1_zw/viewform">form link <i class="fa-solid fa-square-up-right"></i></a></p>
+                    <p>5. Online certificate and transcript Form <a class="text-base-color-2" href="https://forms.gle/fo9obEV3AvUeUuTe8">form link <i class="fa-solid fa-square-up-right"></i></a></p>
                     <p>6. Official Letter Form <a class="text-base-color-2" href="https://docs.google.com/document/d/163tZ8X_Sgk0AVapMyDfYDdz9cY1AeFNJP8McJ8e5Czg/edit?usp=sharing">form link <i class="fa-solid fa-square-up-right"></i></a></p>
                     <br><br>
                     <h3 class="text-base-color fw-semibold">For staff:</h3>

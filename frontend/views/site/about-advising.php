@@ -114,7 +114,7 @@
                 <div  class="p-2 rounded-5" style="border: 2px dashed lightgreen">
                     <h3 class="text-base-color-2 fw-semibold pt-1">Contact us</h3>
                     <p>For an advising session you can make an appointment through our website, send an email to <a class="text-base-color-2" href="mailto:registrar@newuu.uz">registrar@newuu.uz</a> or visit our office (U.C.A. 103). We are available Monday to Friday from 9:00 a.m. to 6:00 p.m.</p>
-                    <a href="<?=\yii\helpers\Url::to(['/site/make-appointment'])?>" class="btn bg-base-color-2 text-white hover-base  btn-large btn-rounded d-table d-lg-inline-block lg-mb-15px md-mx-auto">Appointment</a>
+                    <a target="_blank" href="<?=\yii\helpers\Url::to(['/site/make-appointment'])?>" class="btn bg-base-color-2 text-white hover-base  btn-large btn-rounded d-table d-lg-inline-block lg-mb-15px md-mx-auto">Appointment</a>
                 </div>
             </div>
         </div>

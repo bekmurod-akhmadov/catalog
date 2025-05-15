@@ -378,6 +378,11 @@ class SiteController extends Controller
         return $this->render('faq');
     }
 
+    public function actionStatistics()
+    {
+        return $this->render('statistics');
+    }
+
 
 
 

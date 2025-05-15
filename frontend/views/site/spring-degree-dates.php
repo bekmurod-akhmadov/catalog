@@ -67,7 +67,7 @@
                 <ul class="list-style-04 ps-4">
                     <li><b>Registrar’s Office Contact Information:</b><br>
                         <span>
-                        TG: <a class="text-base-color-2" href="@nuuacademicofficebot">@nuuacademicofficebot</a><br>
+                       TG: <a class="text-base-color-2" href="https://t.me/nuuacademicofficebot">@nuuacademicofficebot</a><br>
                         Email: <a class="text-base-color-2" href="mailto:registrar@newuu.uz">registrar@newuu.uz</a><br>
                         Phone: <a class="text-base-color-2" href="tel:+998 71 202 41 11">+998 71 202 41 11 (int. 183, 185, 186, 187)</a><br>
                         Working hours: <span class="text-base-color-2">Mon-Fri, 9:00 a.m. – 6:00 p.m.</span><br>

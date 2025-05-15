@@ -101,15 +101,15 @@
                         </div>
                     </div>
                     <div class="absolute-middle-right md-absolute-middle-center right-minus-45px md-right-auto d-inline-block text-center z-index-9">
-                        <a href="https://youtu.be/5mS3eSabIog?si=3LOC3zIEQBx8Tg4t" class="bg-white box-shadow-extra-large rounded-circle video-icon-box video-icon-extra-large popup-youtube d-inline-block appear anime-complete" data-anime="{ &quot;translate&quot;: [0, 0], &quot;scale&quot;: [0,1], &quot;duration&quot;: 1000, &quot;delay&quot;: 300, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutBack&quot; }" style="translate: 0px;">
-                                <span>
-                                    <span class="video-icon bg-white">
-                                        <i class="fa-solid fa-play text-base-color"></i>
-                                        <span class="video-icon-sonar">
-                                            <span class="video-icon-sonar-bfr bg-base-color opacity-9"></span>
-                                        </span>
+                        <a href="https://www.youtube.com/watch?v=oA5GCvwGsx8" class="bg-white box-shadow-extra-large rounded-circle video-icon-box video-icon-extra-large popup-youtube d-inline-block appear anime-complete" data-anime="{ &quot;translate&quot;: [0, 0], &quot;scale&quot;: [0,1], &quot;duration&quot;: 1000, &quot;delay&quot;: 300, &quot;staggervalue&quot;: 300, &quot;easing&quot;: &quot;easeOutBack&quot; }" style="translate: 0px;">
+                            <span>
+                                <span class="video-icon bg-white">
+                                    <i class="fa-solid fa-play text-base-color"></i>
+                                    <span class="video-icon-sonar">
+                                        <span class="video-icon-sonar-bfr bg-base-color opacity-9"></span>
                                     </span>
                                 </span>
+                            </span>
                         </a>
                     </div>
                 </div>
@@ -192,7 +192,7 @@
                 <div  class="p-2 rounded-5" style="border: 2px dashed lightgreen">
                     <h3 class="text-base-color-2 fw-semibold pt-1">Contact us</h3>
                     <p>For an advising session you can make an appointment through our website, send an email to <a class="text-base-color-2" href="mailto:registrar@newuu.uz">registrar@newuu.uz</a> or visit our office (U.C.A. 103). We are available Monday to Friday from 9:00 a.m. to 6:00 p.m.</p>
-                    <a href="make-appointment.html" class="btn bg-base-color-2 text-white hover-base  btn-large btn-rounded d-table d-lg-inline-block lg-mb-15px md-mx-auto">Appointment</a>
+                    <a target="_blank" href="https://calendar.app.google/NEpUhM6HJE6AoEA7A" class="btn bg-base-color-2 text-white hover-base  btn-large btn-rounded d-table d-lg-inline-block lg-mb-15px md-mx-auto">Appointment</a>
                 </div>
             </div>
         </div>
