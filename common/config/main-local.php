@@ -8,7 +8,6 @@ return [
             'username' => getenv('DB_USERNAME'),
             'password' => getenv('DB_PASSWORD'),
             'charset' => 'utf8',
-            kiemieijeirn4ir4
 
         ],
         'mailer' => [
