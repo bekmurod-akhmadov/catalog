@@ -81,11 +81,11 @@
                         </li>
                         <li>
                             <div class="d-flex top-menu-2 mt-3 flex-column p-3">
-                                <a href="<?=\yii\helpers\Url::to(['/site/pre-registration'])?>" class="text-turquoise">Statistics & Reports</a>
-                                <a href="<?=\yii\helpers\Url::to(['/site/pre-registration'])?>" class="text-turquoise">Forms</a>
-                                <a href="<?=\yii\helpers\Url::to(['/site/pre-registration'])?>" class="text-turquoise">Contact</a>
-                                <a href="<?=\yii\helpers\Url::to(['/site/pre-registration'])?>" class="text-turquoise">Handbooks</a>
-                                <a href="<?=\yii\helpers\Url::to(['/site/pre-registration'])?>" class="text-turquoise">FAQ</a>
+                                <a href="<?=\yii\helpers\Url::to(['/site/statistics'])?>" class="text-turquoise">Statistics & Reports</a>
+                                <a href="<?=\yii\helpers\Url::to(['/site/forms'])?>" class="text-turquoise">Forms</a>
+                                <a href="<?=\yii\helpers\Url::to(['/site/contact'])?>" class="text-turquoise">Contact</a>
+<!--                                <a href="--><?php //=\yii\helpers\Url::to(['/site/pre-registration'])?><!--" class="text-turquoise">Handbooks</a>-->
+                                <a href="<?=\yii\helpers\Url::to(['/site/faq'])?>" class="text-turquoise">FAQ</a>
                             </div>
                         </li>
                     </ul>
