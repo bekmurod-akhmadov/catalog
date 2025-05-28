@@ -39,11 +39,12 @@
                         <li class="nav-item">
                             <a href="<?=\yii\helpers\Url::to(['/site/calendars'])?>" class="nav-link">Calendars</a>
                         </li>
+                      
                         <li class="nav-item dropdown dropdown-with-icon-style02">
                             <a href="#" class="nav-link">Academics</a>
-                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
-                                <li><a href="<?=\yii\helpers\Url::to(['/site/pre-registration'])?>"><i class="bi bi-briefcase"></i>Pre-registration</a></li>
+                            <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                               <li><a href="<?=\yii\helpers\Url::to(['/site/pre-registration'])?>"><i class="bi bi-briefcase"></i>Pre-registration</a></li>
                                 <li><a href="<?=\yii\helpers\Url::to(['/site/registration-information'])?>"><i class="bi bi-briefcase"></i>Registration Information</a></li>
                                 <li><a href="<?=\yii\helpers\Url::to(['/site/curriculum'])?>"><i class="bi bi-briefcase"></i>Curriculum</a></li>
                                 <li><a href="<?=\yii\helpers\Url::to(['/site/transfer-credit'])?>"><i class="bi bi-briefcase"></i>Transfer Credit</a></li>
