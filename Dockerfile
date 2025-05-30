@@ -7,7 +7,6 @@ RUN apt-get update \
        curl \
        git \
        unzip \
-       libpq-dev \
        libzip-dev \
        libicu-dev \
        libonig-dev \
@@ -20,7 +19,7 @@ RUN apt-get update \
   && docker-php-ext-configure intl \
   && docker-php-ext-configure gd --with-freetype --with-jpeg \
   && docker-php-ext-install -j$(nproc) \
-       pdo_pgsql \
+       pdo_mysql \
        mbstring \
        xml \
        zip \
@@ -36,7 +35,6 @@ FROM php:8.1-fpm
 
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
-      libpq5 \
       libzip4 \
       libjpeg62-turbo \
       libpng16-16 \
@@ -56,7 +54,6 @@ RUN composer install --no-interaction --prefer-dist \
  && mkdir -p runtime web/assets \
  && chown -R www-data:www-data runtime web/assets \
  && chmod -R 777 /var/www/html
- 
 
 EXPOSE 9000
 CMD ["php-fpm"]
