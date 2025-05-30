@@ -3,8 +3,8 @@
 return [
     'components' => [
         'db' => [
-           'class' => \yii\db\Connection::class,
-            'dsn' => 'pgsql:host=' . getenv('DB_HOST') . ';port=' . getenv('DB_PORT') . ';dbname=' . getenv('DB_DATABASE'),
+            'class' => \yii\db\Connection::class,
+            'dsn' => 'mysql:host=' . getenv('DB_HOST') . ';port=' . getenv('DB_PORT') . ';dbname=' . getenv('DB_DATABASE'),
             'username' => getenv('DB_USERNAME'),
             'password' => getenv('DB_PASSWORD'),
             'charset' => 'utf8',
